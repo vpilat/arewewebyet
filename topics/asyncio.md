@@ -13,6 +13,8 @@ packages:
  - async-trait
  - futures
  - futures-intrusive
+ - futures-timer
+ - stream-cancel
  - tokio
  - tracing
 
