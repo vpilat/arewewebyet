@@ -45,9 +45,9 @@ upcoming:
 
 {% include packages.html packages=page.http2 %}
 
-## Quick
+## QUIC
 
-{% include packages.html packages=page.quick %}
+{% include packages.html packages=page.quic %}
 
 ## Websocket
 
