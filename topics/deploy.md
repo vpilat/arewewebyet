@@ -10,7 +10,7 @@ intro: How are on quick and easy deploying of our applications into existing ser
 
 <h2>Heroku {% include level.html level=3 %}</h2>
 
-You didn't really expect Heroku to support rust natively, did you? But if you are looking at this subject, you probably are familiar with running heroku with an inofficial [buildpack](https://devcenter.heroku.com/articles/buildpacks). In that case, you are in a lot of luck, because [EMK](https://github.com/emk) provides that for you already: [github.com/emk/heroku-buildpack-rust](https://github.com/emk/heroku-buildpack-rust)
+You didn't really expect Heroku to support rust natively, did you? But if you are looking at this subject, you probably are familiar with running heroku with an unofficial [buildpack](https://devcenter.heroku.com/articles/buildpacks). In that case, you are in a lot of luck, because [EMK](https://github.com/emk) provides that for you already: [github.com/emk/heroku-buildpack-rust](https://github.com/emk/heroku-buildpack-rust)
 
 <h2>Docker {% include level.html level=2 %}</h2>
 
