@@ -111,13 +111,3 @@ learn more about the state of web development in Rust by topic:
   <li>{% include level.html level=5 %}: barely there, needs serious work</li>
   <li>{% include level.html level=6 %}: basically nonexistent</li>
 </ul>
-
-
-<h3> Latest News <a href="/atom.xml" title="subscribe"><i class="fa fa-rss-square"></i></a></h3>
-
-<ul class="related-news">
-  {% for post in site.posts | limit:5 %}
-    {% include news_item.html post=post %}
-  {% endfor %}
-  <li><a href='/news/'>show all</a></li>
-</ul>
