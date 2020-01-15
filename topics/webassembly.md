@@ -22,6 +22,7 @@ packages:
  - dominator
  - futures-signals
  - gloo
+ - mogwai
  - moxie-dom
  - plaster
  - plotters
