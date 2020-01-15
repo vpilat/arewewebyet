@@ -13,6 +13,9 @@ servers:
 http2:
  - h2
 
+quic:
+ - quinn
+
 websocket:
  - tungstenite
  - websocket
@@ -41,6 +44,10 @@ upcoming:
 ## HTTP2
 
 {% include packages.html packages=page.http2 %}
+
+## QUIC
+
+{% include packages.html packages=page.quic %}
 
 ## Websocket
 

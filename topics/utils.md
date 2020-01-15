@@ -9,6 +9,7 @@ intro: This collects a range of packages which are commonly used and needed in w
 packages:
  - cookie
  - clap
+ - heim
  - tempfile
  - urlencoded
  - bodyparser

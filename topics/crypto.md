@@ -23,6 +23,9 @@ passwords:
 
 tls:
  - rustls
+ - tokio-openssl
+ - tokio-rustls
+ - tokio-tls
  - openssl
  - webpki
 
