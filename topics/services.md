@@ -11,6 +11,8 @@ queues:
  - stomp
  - amqp
  - kafka
+ - lapin
+ - celery
 
 search:
  - rs-es
