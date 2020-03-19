@@ -22,7 +22,6 @@ pubsub:
 
 missing:
  - Hadoop connectors
- - Celery Queueing
 
 news_tag: services
 ---
