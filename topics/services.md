@@ -11,6 +11,8 @@ queues:
  - stomp
  - amqp
  - kafka
+ - lapin
+ - celery
 
 search:
  - rs-es
@@ -20,7 +22,6 @@ pubsub:
 
 missing:
  - Hadoop connectors
- - Celery Queueing
 
 news_tag: services
 ---
