@@ -7,17 +7,18 @@ intro: The modern web development stack doesn't only need a web-server but is of
 level: 5
 
 queues:
- - beanstalkd
- - stomp
  - amqp
+ - beanstalkd
+ - celery
  - kafka
  - lapin
- - celery
+ - stomp
 
 search:
  - rs-es
 
 pubsub:
+ - pulsar
  - redis
 
 missing:
