@@ -10,6 +10,7 @@ queues:
  - amqp
  - beanstalkd
  - celery
+ - datafusion
  - kafka
  - lapin
  - stomp
