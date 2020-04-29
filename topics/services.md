@@ -46,3 +46,7 @@ news_tag: services
 <h2>Pubsub</h2>
 
 {% include packages.html packages=page.pubsub %}
+
+<h2>Connectors</h2>
+
+{% include packages.html packages=page.connectors %}
