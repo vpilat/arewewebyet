@@ -57,7 +57,7 @@ If you'd like to use an ORM there is:
     <a href="/topics/database/#pkg-diesel">Diesel (Postgres / Mysql / Sqlite)</a>
   </li>
   <li>
-    <a href="/topics/database/#pkg-rustorm">Rustorm (Postgres / Sqlite)</a>
+    <a href="/topics/database/#pkg-rustorm">Rustorm (Postgres / Mysql / Sqlite)</a>
   </li>
 </ul>
 
