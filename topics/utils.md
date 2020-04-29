@@ -16,6 +16,7 @@ packages:
  - queryst
  - scgi
  - sass-rs
+ - ratelimit_meter
  - regex
  - chrono
  - time

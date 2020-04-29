@@ -7,6 +7,7 @@ intro: With many Web-Apps we want to reach farther than our locally hosted servi
 level: 4
 packages:
  - acme-client
+ - aspotify
  - twitter-api
  - discord
  - strava
