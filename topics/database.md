@@ -29,9 +29,14 @@ drivers:
  - mongo_driver
 
 orms:
- - rustorm
  - diesel
+ - quaint
+ - rustorm
  - tql
+
+pools:
+ - mobc
+ - r2d2
 
 tools:
  - migrant
@@ -43,14 +48,18 @@ tools:
 news_tag: database
 ---
 
-<h2 id="drivers">Drivers  {% include level.html level=2 %}</h2>
+<h2 id="drivers">Drivers</h2>
 
 {% include packages.html packages=page.drivers %}
 
-<h2 id="orms">ORMs  {% include level.html level=4 %}</h2>
+<h2 id="orms">ORMs</h2>
 
 {% include packages.html packages=page.orms %}
 
-<h2 id="tooling">Tooling  {% include level.html level=5 %}</h2>
+<h2 id="pools">Connection pools</h2>
+
+{% include packages.html packages=page.pools %}
+
+<h2 id="tooling">Tooling</h2>
 
 {% include packages.html packages=page.tools %}

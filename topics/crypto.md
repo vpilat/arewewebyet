@@ -8,6 +8,7 @@ intro: Cryptography is a corner stone of a trusted web. Without it many services
 
 suites:
  - openssl
+ - orion
  - libsodium-sys
  - gpgme
  - ring
