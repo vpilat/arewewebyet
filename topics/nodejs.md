@@ -10,6 +10,7 @@ packages:
  - cargo-node
  - neon
  - tauri
+ - webbundle
 
 news_tag: node.js
 ---
