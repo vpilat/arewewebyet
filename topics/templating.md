@@ -10,6 +10,7 @@ packages:
  - ammonia
  - askama
  - comrak
+ - far
  - handlebars
  - handlebars-iron
  - horrorshow

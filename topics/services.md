@@ -10,10 +10,12 @@ queues:
  - amqp
  - beanstalkd
  - celery
- - datafusion
  - kafka
  - lapin
  - stomp
+
+queries:
+ - datafusion
 
 search:
  - rs-es
@@ -22,21 +24,25 @@ pubsub:
  - pulsar
  - redis
 
-missing:
- - Hadoop connectors
+connectors:
+ - efflux
 
 news_tag: services
 ---
 
 
-<h2>Worker Queue  {% include level.html level=5 %}</h2>
+<h2>Worker Queue</h2>
 
 {% include packages.html packages=page.queues %}
 
-<h2>Search Services  {% include level.html level=5 %}</h2>
+<h2>Query engines</h2>
+
+{% include packages.html packages=page.queries %}
+
+<h2>Search Services</h2>
 
 {% include packages.html packages=page.search %}
 
-<h2>Pubsub  {% include level.html level=5 %}</h2>
+<h2>Pubsub</h2>
 
 {% include packages.html packages=page.pubsub %}
