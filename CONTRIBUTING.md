@@ -1,6 +1,6 @@
 # Contributing
 
-All contributions are welcome to the project, the curators try to review all PRs as quickly as possible. Yet, this is a volunteer run project, so please be patient with it. If you are planning on submitting bigger changes to the projects, please open a github issue first and talk to the team before submitting to make sure your work will be accepted. Please refer to the  [CONTRIBUTING](./CONTRIBUTING.md) document for details.
+All contributions are welcome to the project, the curators try to review all PRs as quickly as possible. Yet, this is a volunteer run project, so please be patient with it. If you are planning on submitting bigger changes to the projects, please open a github issue first and talk to the team before submitting to make sure your work will be accepted.
 
 The curators might reject any contribution without stating a reason, but especially if the contribution or contributor in question is not following the [code of conduct](./CODE_OF_CONDUCT.md) or doesn't follow the right procedure outlined below.
 
