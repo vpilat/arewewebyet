@@ -27,6 +27,7 @@ drivers:
  - memcache
  - mongodb
  - mongo_driver
+ - sqlx
 
 orms:
  - diesel
