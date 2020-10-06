@@ -8,7 +8,7 @@ The curators might reject any contribution without stating a reason, but especia
 
 If a package isn't listed on the website yet, feel free to send us a pull-request for it. The only requirement we have on packages is that they are related to the web-stack, open source and publicly available via [crates.io](http://www.crates.io) . Please make sure the pull request contains the following:
 
- - the data for your package (see the [DOCS] on how to do that)
+ - the data for your package (see the [DOCS.md](DOCS.md) on how to do that)
  - adds the package to the appropriate topic(s)
 
 If you are in a hurry and don't have the time to prepare the PR, you can also submit an issue requesting for the package to be added. *Make sure you mark the issue with the `please-add`-tag*.
