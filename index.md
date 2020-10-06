@@ -29,13 +29,13 @@ There are many integrations to third-party services, such as:
     <a href="/topics/services/#pkg-rusoto">Rusoto</a> (AWS)
   </li>
   <li>
-    <a href="/topics/services/#pkg-azure">Azure</a>
+    <a href="/topics/services/#pkg-azure_sdk_for_rust">Azure</a>
   </li>
   <li>
     <a href="/topics/services/#pkg-redis">Redis</a>
   </li>
   <li>
-    <a href="/topics/services/#pkg-elastic">Elasticsearch</a>
+    <a href="/topics/services/#pkg-elasticsearch">Elasticsearch</a>
   </li>
 </ul>
 
