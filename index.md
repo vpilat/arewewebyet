@@ -2,97 +2,69 @@
 layout: main
 ---
 
-# Are we *web* yet?
+# Are we _web_ yet?
 
-**You can build stuff!**
-
-<p>Rust has a mature <a href="/topics/stack/">HTTP stack</a>{% include level.html level=2%} and various <a href="/topics/frameworks/">frameworks</a>{% include level.html level=3 %} enable you to build APIs and backend services quickly. While increasingly more <a href="/topics/database/#drivers">databases drivers</a>{% include level.html level=2 %} become available, <a href="/topics/database/#orms">ORMs</a>{% include level.html level=5 %} and connections to <a href="/topics/services/">external services</a>{% include level.html level=5 %} (like search or worker queues) are still scarce. Looking further, it doesn't necessarily get better. Though there is significant support for base needs (like <a href="/topics/compression/">data compression</a>{% include level.html level=2 %} or <a href="/topics/logging/">logging</a>{% include level.html level=2 %}), a lot more web-specific needs are still unmet and immature.</p>
-
-<p>&nbsp;</p>
+**Yes! And its freaking fast!**
 
 ## Can I replace my Rails/Django/Flask already?
 
-**Well, probably not yet**. While the basics are there, many of the handy utility libs that make working with many popular frameworks so quick and easy are still missing. **If your service primarily provides an API** to be consumed by  other computers, requires little external services and you are happy with writing most SQL yourself, then **Yes, You Can!** Otherwise, we would not recommend it just yet.
-
-### What should I replace it with?
-
-The web frameworks of choice in the community are:
+**Yup!** Rust has mature and production ready frameworks in <a href="/topics/frameworks/#pkg-actix-web">Actix Web</a> and <a href="/topics/frameworks/#pkg-rocket">Rocket</a>, and newer ones like <a href="/topics/frameworks/#pkg-warp">Warp</a> and <a href="/topics/frameworks/#pkg-tide">Tide</a>. These provide everything you'd expect from a web framework, from routing and middleware, to templating, and JSON/form handling. There are crates for everything, and more! For databases, there's:
 
 <ul>
   <li>
-    <a href="/topics/frameworks/#pkg-actix-web">Actix</a>
+    <a href="/topics/database/#pkg-diesel">Diesel</a>, a full-fledged ORM.
   </li>
   <li>
-    <a href="/topics/frameworks/#pkg-gotham">Gotham</a>
+    <a href="/topics/database/#pkg-sqlx">sqlx</a>, the async sql toolkit.
   </li>
   <li>
-    <a href="/topics/frameworks/#pkg-rocket">Rocket</a>
-  </li>
-  <li>
-    <a href="/topics/frameworks/#pkg-tower-web">Tower Web</a>
-  </li>
-  <li>
-    <a href="/topics/frameworks/#pkg-warp">Warp</a>
+    As well as native drivers for <a href="/topics/database/#pkg-mongo">MongoDB</a>, <a href="/topics/database/#pkg-rusqlite">SQlite</a>, <a href="/topics/database/#pkg-postgres">Postgres</a>, and <a href="/topics/database/#pkg-mysql">MySQL</a>.
   </li>
 </ul>
 
-For data storage there are mature drivers for:
+There are many integrations to third-party services, such as:
 
 <ul>
   <li>
-    <a href="/topics/database/#pkg-mysql">Mysql</a>
+    <a href="/topics/services/#pkg-rusoto">Rusoto</a> (AWS)
   </li>
   <li>
-    <a href="/topics/database/#pkg-postgres">Postgres</a> 
+    <a href="/topics/services/#pkg-azure">Azure</a>
   </li>
   <li>
-    <a href="/topics/database/#pkg-redis">Redis</a>
+    <a href="/topics/services/#pkg-redis">Redis</a>
+  </li>
+  <li>
+    <a href="/topics/services/#pkg-elastic">Elasticsearch</a>
   </li>
 </ul>
 
-If you'd like to use an ORM there is:
+<p>And of course, there is plenty of support for basic web needs, like <a href="/topics/logging/">logging</a> {% include level.html level=2 %}, <a href="/topics/auth/">authorization</a> {% include level.html level=4 %}, <a href="/topics/templating/">templating</a> {% include level.html level=4 %}, and <a href="/topics/email/">email</a> {% include level.html level=4 %}.</p>
 
-<ul>
-  <li>
-    <a href="/topics/database/#pkg-diesel">Diesel (Postgres / Mysql / Sqlite)</a>
-  </li>
-  <li>
-    <a href="/topics/database/#pkg-rustorm">Rustorm (Postgres / Mysql / Sqlite)</a>
-  </li>
-</ul>
+While development might not be as smooth as something like Rails or Django, the Rust web development ecosystem and community is engaged and very helpful. A lot of work has been put into the web in the past few years, and we're getting there!
 
-If you need to (or want to) go lower in the stack:
+### WebAssembly???
 
-<ul>
-  <li>
-    <a href="/topics/stack/#pkg-h2">H2</a>
-  </li>
-  <li>
-    <a href="/topics/stack/#pkg-hyper">Hyper</a>
-  </li>
-  <li>
-    <a href="/topics/stack/#pkg-tiny_http">tiny_http</a>
-  </li>
-</ul>
+<p>Rust can even run on the browser, by compiling to <a href="/topics/webassembly/">WebAssembly</a> {% include level.html level=2 %}. This means that you can take advantage of the amazing Rust ecosystem on the browser! Rust and WebAssembly integrate with existing Javascript tooling. It supports NPM, Webpack, and ECMAScript modules! There are some <a href="/topics/webassembly/">awesome Rust and WebAssembly</a> projects out there. For example, <a href="https://github.com/yewstack/yew">Yew</a> and <a href="https://github.com/seed-rs/seed">Seed</a> let you create front-end web apps with Rust in a way that feels almost like React.js.</p>
+
+For more information about Rust and WebAssembly, check out the [Rust and WebAssembly Book](https://rustwasm.github.io/docs/book/introduction.html).
 
 ### Getting started
 
-After you've set up your Rust and worked yourself [through "The Book"](https://doc.rust-lang.org/book/), you might want to check any of these blog posts (ordered latest published first):
+After you've set up your Rust and worked yourself [through "The Book"](https://doc.rust-lang.org/book/), you might want to check any of these resources:
 
-- [Using Stainless with Rocket](http://neikos.me/Using_Stainless_with_Rocket.html)
-- [REST in Rust](https://gsquire.github.io/static/post/rest-in-rust/)
-- [Connecting a webservice to a database in Rust](http://hermanradtke.com/2016/05/23/connecting-webservice-database-rust.html)
-- [Let's Build a Web Server in Rust](https://dfockler.github.io/2016/05/20/web-server.html)
-- [Creating a basic webservice in Rust](http://hermanradtke.com/2016/05/16/creating-a-basic-webservice-in-rust.html)
-- [Build an API in Rust with JWT Authentication using Nickel.rs](https://auth0.com/blog/2015/11/30/build-an-api-in-rust-with-jwt-authentication-using-nickelrs/)
+- [Building web apps with Rust using the Rocket framework](https://blog.logrocket.com/rust-web-apps-using-rocket-framework/)
+- [Educational Rust Live Coding - Web App From Scratch](https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw&ab_channel=DavidPedersen)
+- [Actix-Web Auth Microservice](https://gill.net.in/posts/auth-microservice-rust-actix-web1.0-diesel-complete-tutorial/)
+- [Practical Rust Web Development (Series)](https://dev.to/werner/practical-rust-web-development-api-rest-29g1)
+- [Build an API in Rust with JWT Authentication](https://auth0.com/blog/build-an-api-in-rust-with-jwt-authentication-using-actix-web/)
+- [Rocket Quickstart](https://rocket.rs/v0.4/guide/quickstart/)
 
-
-Either way you choose, if you find yourself stuck and looking for help, the [official Rust-Lang user forum](https://users.rust-lang.org/) has a [help section](https://users.rust-lang.org/c/help), where you are welcome to post your questions and soon will find help.
-
+Either way you choose, if you find yourself stuck and looking for help, you can check out the [official Rust forum](https://users.rust-lang.org/c/help), the [rust tag on stackoverflow](https://stackoverflow.com/questions/tagged/rust), or the [Rust Discord server](https://discord.com/invite/rust-lang) where you are welcome to post your questions and will find excellent help.
 
 ## In detail
 
-learn more about the state of web development in Rust by topic:
+Learn more about the state of web development in Rust by topic:
 
 <ul class="topic-list">
   {% for page in site.pages %}
