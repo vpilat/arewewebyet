@@ -7,6 +7,7 @@ level: 2
 intro: Binary protocol support
 
 packages:
+ - capnp
  - grpc
  - protobuf
  - prost
