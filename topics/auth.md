@@ -7,6 +7,7 @@ intro: Authorization and Authentication are a big deal for web development. Take
 level: 4
 packages:
  - cookie
+ - jsonwebtoken
  - oauth2
  - oauth-client
  - oxide-auth
