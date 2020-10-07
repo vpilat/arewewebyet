@@ -1,5 +1,4 @@
 +++
-template = "topic.html"
 title = "Crypto"
 
 [extra]
