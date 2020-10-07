@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% import "macros/level.html" as level %}
+
+{% block content %}
+
+<div class="github-fork-ribbon-wrapper left">
+  <div class="github-fork-ribbon">
+    <a href="https://github.com/rust-lang/arewewebyet">Contribute on GitHub</a>
+  </div>
+</div>
+
+<div id="main">
+  <h1>Are we <em>web</em> yet?</h1>
+  
+  <p><strong>Yes! And its freaking fast!</strong></p>
+  
+  <h2>Can I replace my Rails/Django/Flask already?</h2>
+  
+  <p>
+    <strong>Yup!</strong> 
+    Rust has mature and production ready frameworks in <a href="/topics/frameworks/#pkg-actix-web">Actix Web</a> and 
+    <a href="/topics/frameworks/#pkg-rocket">Rocket</a>, and newer ones like <a href="/topics/frameworks/#pkg-warp">Warp</a> 
+    and <a href="/topics/frameworks/#pkg-tide">Tide</a>. These provide everything you’d expect from a web framework, from routing 
+    and middleware, to templating, and JSON/form handling. There are crates for everything, and more! For databases, there’s:</p>
+  
+  <ul>
+    <li>
+      <a href="/topics/database/#pkg-diesel">Diesel</a>, a full-fledged ORM.
+    </li>
+    <li>
+      <a href="/topics/database/#pkg-sqlx">sqlx</a>, the async sql toolkit.
+    </li>
+    <li>
+      As well as native drivers for <a href="/topics/database/#pkg-mongo">MongoDB</a>, <a
+        href="/topics/database/#pkg-rusqlite">SQlite</a>, <a href="/topics/database/#pkg-postgres">Postgres</a>, and <a
+        href="/topics/database/#pkg-mysql">MySQL</a>.
+    </li>
+  </ul>
+  
+  There are many integrations to third-party services, such as: {{ level::level(level=4) }}
+  
+  <ul>
+    <li>
+      <a href="/topics/services/#pkg-rusoto">Rusoto</a> (AWS)
+    </li>
+    <li>
+      <a href="/topics/services/#pkg-azure_sdk_for_rust">Azure</a>
+    </li>
+    <li>
+      <a href="/topics/services/#pkg-redis">Redis</a>
+    </li>
+    <li>
+      <a href="/topics/services/#pkg-elasticsearch">Elasticsearch</a>
+    </li>
+  </ul>
+  
+  <p>And of course, there is plenty of support for basic web needs, like <a href="/topics/logging/">logging</a>
+    {{ level::level(level=2) }}, <a href="/topics/auth/">authorization</a> {{ level::level(level=4) }}, <a
+      href="/topics/templating/">templating</a> {{ level::level(level=4) }}, and <a href="/topics/email/">email</a>
+    {{ level::level(level=4) }}.</p>
+  
+  While development might not be as smooth as something like Rails or Django, the Rust web development ecosystem and
+  community is engaged and very helpful. A lot of work has been put into the web in the past few years, and we're getting
+  there!
+  
+  <h2>WebAssembly???</h2>
+  
+  <p>Rust can even run on the browser, by compiling to <a href="/topics/webassembly/">WebAssembly</a>
+    {{ level::level(level=2) }}. This means that you can take advantage of the amazing Rust ecosystem on the browser! Rust and
+    WebAssembly integrate with existing Javascript tooling. It supports NPM, Webpack, and ECMAScript modules! There are
+    some <a href="/topics/webassembly/">awesome Rust and WebAssembly</a> projects out there. For example, <a
+      href="https://github.com/yewstack/yew">Yew</a> and <a href="https://github.com/seed-rs/seed">Seed</a> let you create
+    front-end web apps with Rust in a way that feels almost like React.js.</p>
+  
+  <p>For more information about Rust and WebAssembly, check out the <a
+      href="https://rustwasm.github.io/docs/book/introduction.html">Rust and WebAssembly Book</a>.</p>
+  
+  <h2>Getting started</h2>
+  
+  <p>After you’ve set up your Rust and worked yourself <a href="https://doc.rust-lang.org/book/">through “The Book”</a>,
+    you might want to check any of these resources:</p>
+  
+  <ul>
+    <li><a href="https://blog.logrocket.com/rust-web-apps-using-rocket-framework/">Building web apps with Rust using the
+        Rocket framework</a></li>
+    <li><a
+        href="https://www.youtube.com/watch?v=yNe9Xr35n4Q&amp;list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw&amp;ab_channel=DavidPedersen">Educational
+        Rust Live Coding - Web App From Scratch</a></li>
+    <li><a href="https://gill.net.in/posts/auth-microservice-rust-actix-web1.0-diesel-complete-tutorial/">Actix-Web Auth
+        Microservice</a></li>
+    <li><a href="https://dev.to/werner/practical-rust-web-development-api-rest-29g1">Practical Rust Web Development
+        (Series)</a></li>
+    <li><a href="https://auth0.com/blog/build-an-api-in-rust-with-jwt-authentication-using-actix-web/">Build an API in
+        Rust with JWT Authentication</a></li>
+    <li><a href="https://rocket.rs/v0.4/guide/quickstart/">Rocket Quickstart</a></li>
+  </ul>
+  
+  <p>If you find yourself stuck and looking for help, you can check out the <a
+      href="https://users.rust-lang.org/c/help">official Rust forum</a>, the <a
+      href="https://stackoverflow.com/questions/tagged/rust">rust tag on stackoverflow</a>, or the <a
+      href="https://discord.com/invite/rust-lang">Rust Discord server</a> where you are welcome to post your questions and
+    will find excellent help.</p>
+
+  <h2>In detail</h2>
+  
+  Learn more about the state of web development in Rust by topic:
+
+  <ul class="topic-list">
+    {% set section = get_section(path="topics/_index.md") %}
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink }}">{{page.title}}</a> {{ level::level(level=page.extra.level) }}</li>
+    {% endfor %}
+  </ul>
+  
+  <ul class="legend">
+    <li>{{ level::level(level=0) }}: everything is awesome<a href="https://www.youtube.com/watch?v=9cQgQIMlwWw"
+        target="_blank">™</a>: stable, tested and mature</li>
+    <li>{{ level::level(level=1) }}: stuff's pretty great</li>
+    <li>{{ level::level(level=2) }}: getting there, stable but still maturing</li>
+    <li>{{ level::level(level=3) }}: not yet stable, but progressing</li>
+    <li>{{ level::level(level=4) }}: unstable/incomplete, needs work</li>
+    <li>{{ level::level(level=5) }}: barely there, needs serious work</li>
+    <li>{{ level::level(level=6) }}: basically nonexistent</li>
+  </ul>
+</div>
+
+{% endblock content %}
