@@ -30,9 +30,9 @@
       {% endif %}
 
       {% if page.source.author %}
-      {% assign author=site.data.authors[author] %}
+      {% set author = site.data.authors[author] %}
       {% if author %}
-      <img src="{{author.img|default:'/asset/bashy-big.svg'}}">
+      <img src="{{ author.img or '/asset/bashy-big.svg' }}">
       <a {% if author.curator %} href="/curators/#{{cmt.author}}" {% else %} href="{{author.homepage}}" {% endif %}>
         <span class="name">{{author.name}}</span></a>
       {% else %}
@@ -50,7 +50,7 @@
 {% if page.author %}
 <section class="authors">
   <h3>Author</h3>
-  {% include author.html author=page.author %}
+  {{ author(author=page.author) }}
 </section>
 {% endif %}
 

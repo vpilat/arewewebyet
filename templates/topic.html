@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "macros/level.html" as level %}
+{% import "macros/packages.html" as packages %}
 
 {% block content %}
 
@@ -11,19 +13,12 @@
   </label>
 </div>
 
-<h1>{{page.title}} {% include level.html level=page.level%}</h1>
+<h1>{{page.title}} {{ level::level(level=page.extra.level) }}</h1>
 
 
-{% if page.intro %}
-{{page.intro | markdownify }}
-{% endif %}
+{{ page.extra.intro | markdown(inline=true) | safe }}
 
-{{content}}
-
-{% if page.packages %}
-{% include packages.html packages=page.packages %}
-{% endif %}
-
+{{ packages::packages(packages=page.extra.packages) }}
 
 {% if page.upcoming %}
 <h4 class="upcoming">Upcoming</h4>
@@ -51,8 +46,10 @@ We are waiting for the following to reach maturity to be released on crates.io:
 {% if site.tags[page.news_tag] %}
 <h3>Related News</h3>
 <ul class="related-news">
-  {% for post in site.tags[page.news_tag] | limit:3 %}
-  {% include news_item.html post=post %}
+  {% for post in site.tags[page.news_tag] %}
+  <!-- Limit to three tags -->
+  {% if loop.index == 3 %}{% break %}{% endif %}
+  {{ news_item(post=post) }}
   {% endfor %}
 </ul>
 {% endif %}

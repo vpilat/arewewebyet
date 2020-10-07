@@ -1,0 +1,10 @@
+{% macro comments(comments) %}
+<summary onClick="return toggleComments(this);" class="comments-title">
+  <i class="fa fa-comment-o"></i> {{comments|size}} Comments <span class="action">click to toggle</span>
+</summary>
+<detail class="comment-list">
+  {% for comment in comments %}
+    {{ comment(comment=comment) }}
+  {% endfor %}
+</detail>
+{% endmacro comments %}
