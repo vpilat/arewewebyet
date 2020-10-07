@@ -2,34 +2,43 @@
 layout: topic
 title: "External Services"
 
-intro: The modern web development stack doesn't only need a web-server but is often built on a range of external services to provide specific features, from worker queues over search and pubsub, rust support for these is seriously lacking at the moment. Be sure you are able to build the connection yourself if needed.
+intro: The modern web development stack doesn't only need a web-server but is often built on a range of external services to provide specific features, from worker queues to search and pubsub. Rust support for these is certainly not the greatest, but there are popular crates for the most popular services.
 
-level: 5
+level: 4
+
+cloud:
+  - rusoto_core
+  - azure_sdk_for_rust
 
 queues:
- - amqp
- - beanstalkd
- - celery
- - kafka
- - lapin
- - stomp
+  - amqp
+  - beanstalkd
+  - celery
+  - kafka
+  - lapin
+  - stomp
 
 queries:
- - datafusion
+  - datafusion
 
 search:
- - rs-es
+  - elasticsearch
+  - meilisearch-sdk
+  - tantivy
 
 pubsub:
- - pulsar
- - redis
+  - pulsar
+  - redis
 
 connectors:
- - efflux
+  - efflux
 
 news_tag: services
 ---
 
+<h2>Cloud SDK</h2>
+
+{% include packages.html packages=page.cloud %}
 
 <h2>Worker Queue</h2>
 
