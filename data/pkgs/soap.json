@@ -1,0 +1,10 @@
+{
+  "crate": {
+    "name":"soap",
+    "repository":"https://github.com/raventid/soap-rs",
+    "homepage":"https://github.com/raventid/soap-rs",
+    "description": "SOAP client for Rust programming language",
+    "created_at": "2017-09-08T00:00:00.181279+00:00",
+    "updated_at": "2017-09-08T00:00:00.181279+00:00"
+  }
+}

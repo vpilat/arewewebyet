@@ -1,0 +1,10 @@
+{
+    "crate": {
+        "name":"zola",
+        "repository":"https://github.com/getzola/zola",
+        "homepage":"https://www.getzola.org/",
+        "description": "A fast static site generator in a single binary with everything built-in.",
+        "created_at": "2017-03-24T00:00:00.181279+00:00",
+        "updated_at": "2019-04-28T09:26:00.181279+00:00"
+    }
+}
