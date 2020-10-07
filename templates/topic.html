@@ -16,7 +16,7 @@
 <h1>{{page.title}} {{ level::level(level=page.extra.level) }}</h1>
 
 {% if page.extra.intro %}
-  {{ page.extra.intro | markdown(inline=true) | safe }}
+  {{ page.extra.intro | markdown | safe }}
 {% endif %}
 
 {{ page.content | safe }}

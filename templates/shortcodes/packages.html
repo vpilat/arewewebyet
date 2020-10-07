@@ -1,4 +1,3 @@
 {% import "macros/packages.html" as packages %}
-<ul class="pkg-list">
-  {{ packages::packages(packages=page.extra[packages]) }}
-</ul>
+
+{{ packages::packages(packages=page.extra[packages]) }}
