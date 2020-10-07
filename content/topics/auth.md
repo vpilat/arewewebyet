@@ -26,5 +26,3 @@ missing = [
 
 news_tag = "auth"
 +++
-
-{{ packages(packages='packages') }}

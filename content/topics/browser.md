@@ -20,4 +20,3 @@ news_tag = "browser"
 
 Not yet published on crates.io but steady and continuously developed by Mozilla.
 
-{{ packages(packages='packages') }}

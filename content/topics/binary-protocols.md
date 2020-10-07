@@ -20,5 +20,3 @@ packages = [
 
 news_tag = "binary-protocols"
 +++
-
-{{ packages(packages='packages') }}

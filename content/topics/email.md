@@ -16,5 +16,3 @@ packages = [
 
 newstag = "email"
 +++
-
-{{ packages(packages='packages') }}

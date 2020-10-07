@@ -23,5 +23,3 @@ packages = [
 
 news_tag = "asyncio"
 +++
-
-{{ packages(packages='packages') }}

@@ -36,5 +36,3 @@ packages=  [
 
 newstag = "webassembly"
 +++
-
-{{ packages(packages='packages') }}
