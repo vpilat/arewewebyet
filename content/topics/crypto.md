@@ -67,36 +67,37 @@ tooling = [
 newstag = "crypto"
 +++
 
-<h2>Suites  {% include level.html level=2 %}</h2>
+<div>
+
+<h2>Suites {{ level(level=2) }}</h2>
 
 {{ packages(packages='suites') }}
 
-<h2>Random Number Generators  {% include level.html level=0 %}</h2>
+<h2>Random Number Generators  {{ level(level=0) }}</h2>
 
 {{ packages(packages='rng') }}
 
-<h2>Password  {% include level.html level=3 %}</h2>
+<h2>Password  {{ level(level=3) }}</h2>
 
 {{ packages(packages='passwords') }}
 
-<h2>TLS  {% include level.html level=3 %}</h2>
+<h2>TLS  {{ level(level=3) }}</h2>
 
 {{ packages(packages='tls') }}
 
-<h2>Tooling  {% include level.html level=4 %}</h2>
+<h2>Tooling  {{ level(level=4) }}</h2>
 
 <p><em>Tooling is great, just a little scarce...</em></p>
 
 {{ packages(packages='tooling') }}
 
-+++
-
 <h2>Also</h2>
 
-<h3>Hashing  {% include level.html level=3 %}</h3>
+<h3>Hashing  {{ level(level=3) }}</h3>
 
 {{ packages(packages='hashing') }}
 
-<h3>Algorithms  {% include level.html level=3 %}</h3>
+<h3>Algorithms  {{ level(level=3) }}</h3>
 
 {{ packages(packages='algorithms') }}
+</div>
