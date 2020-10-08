@@ -4,7 +4,7 @@ layout: main
 
 # Are we _web_ yet?
 
-**Yes! And its freaking fast!**
+**Yes! And it's freaking fast!**
 
 ## Can I replace my Rails/Django/Flask already?
 
