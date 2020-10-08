@@ -1,57 +1,25 @@
 {% extends "base.html" %}
 
+{% import "macros/news_item.html" as news %}
+
 {% block content %}
 
-<div class="news">
+<h1>{{ section.title }}</h1>
+
+<ul class="related-news">
+  {% for post in section.pages %}
+    {{ news::news_item(post=post) }}
+  {% endfor %}
+</ul>
 
 
-  <h1>{{page.title}}</h1>
-
-  <div class="meta">
-    Published {{page.date | date_to_string}} {% if page.tags %}
-    under <ul>
-      {% for tag in page.tags %}
-      <li>
-        {{tag}}
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </div>
-
-
-  {% if page.source %}
-  <blockquote class="">
-    <cite>
-
-      Posted
-      {% if page.source.link %}
-      on <a href="{{page.source.link.url}}">{{page.source.link.name}}</a>
-      {% endif %}
-
-      {% if page.source.author %}
-      {% set author = site.data.authors[author] %}
-      {% if author %}
-      <img src="{{ author.img or '/asset/bashy-big.svg' }}">
-      <a {% if author.curator %} href="/curators/#{{cmt.author}}" {% else %} href="{{author.homepage}}" {% endif %}>
-        <span class="name">{{author.name}}</span></a>
-      {% else %}
-      by <span class="name">{{page.source.author}}</a>
-        {% endif %}
-        {% endif %} :
-    </cite>
-    {{ page.content }}
-  </blockquote>
-  {% else %}
-  {{ page.content }}
-  {% endif %}
+<div class="alert-box">
+  <h3>Are we missing some important news?</h3>
+  <p>Did we miss an important announcement or update? Or maybe you want to share some good news about future development
+    with our audience? <a
+      href="https://github.com/bashyHQ/arewewebyet/blob/gh-pages/CONTRIBUTING.md#submitting-project-news"
+      target="_blank">Please go ahead</a>!
+  </p>
 </div>
 
-{% if page.author %}
-<section class="authors">
-  <h3>Author</h3>
-  {{ author(author=page.author) }}
-</section>
-{% endif %}
-
-{% endblock content %}
+{% endblock %}
