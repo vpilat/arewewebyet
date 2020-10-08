@@ -1,10 +1,10 @@
 {% macro comment(comment) %}
 {% set author = site.data.authors[author] %}
 <blockquote {% if comment.source_link %} cite="{{comment.source_link}}" {% endif %} class="review {{comment.type}}">
-  {{comment.text | markdownify}}
+  {{comment.text | safe}}
   <cite>
     <p>
-      <img src="{{author.img or '/asset/bashy-big.svg'}}">
+      <img src="{{author.img | default(value=get_url(path='/asset/bashy-big.svg'))}}">
       <a {% if comment.source_link %}
           href="{{comment.source_link}}"
         {% elif author.curator %}
@@ -14,7 +14,7 @@
         {% endif %}>
         <span class="name">{{author.name}}</span></a>
       ,
-      <span class="date">{{comment.date | date_to_string }}</span>
+      <span class="date">{{comment.date | date }}</span>
       <span class="version">on version {{comment.version}}</span>
     </p>
   </cite>

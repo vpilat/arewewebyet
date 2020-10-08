@@ -1,6 +1,9 @@
 +++
 title = "Kafka Client for Rust"
 date = 2015-05-11
+
+[extra]
+
 source = { author = "Spicavigo", link = { url = "https://users.rust-lang.org/t/kafka-client-for-rust/1324", name = "Rust Users Forum" } }
 
 tags = [

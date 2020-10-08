@@ -1,6 +1,9 @@
 +++
 title = "Herd - A HTTP load testing application written in Rust"
 date = 2015-06-23
+
+[extra]
+
 source = { author = "Jacob Clark (imjacobclark)", link = { url = "https://users.rust-lang.org/t/herd-a-http-load-testing-application-written-in-rust/1912", name = "Rust Users Forum" } }
 +++
 
@@ -10,7 +13,7 @@ source = { author = "Jacob Clark (imjacobclark)", link = { url = "https://users.
 
 <p>Currently Herd is able to spawn thousands of concurrent requests to HTTP endpoints by making use of unix process forking and multithreadding, however, there are features I want to implement, but I'm looking for contributors to help get the project off the ground! </p>
 
-<p>Contributions very welcome in the form of pull requests in GitHub: <a href="https://github.com/imjacobclark/Herd" rel="nofollow">https://github.com/imjacobclark/Herd</a></p>
+<p>Contributions very welcome in the form of pull requests in github: <a href="https://github.com/imjacobclark/Herd" rel="nofollow">https://github.com/imjacobclark/Herd</a></p>
 
 <p>Todo</p>
 

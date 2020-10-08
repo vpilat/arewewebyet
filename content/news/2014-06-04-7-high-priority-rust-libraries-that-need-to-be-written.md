@@ -1,6 +1,9 @@
 +++
 title = "7 high priority Rust libraries that need to be written"
 date = 2014-06-04
+
+[extra]
+
 source = { author = "Brian Anderson", link = { url = "https://mail.mozilla.org/pipermail/rust-dev/2014-June/010139.html", name = "rust-dev Mailinglist" } }
 
 tags = [

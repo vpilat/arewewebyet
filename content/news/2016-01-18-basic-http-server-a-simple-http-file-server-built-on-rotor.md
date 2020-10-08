@@ -1,6 +1,9 @@
 +++
 title = "Basic-http-server, a simple HTTP file server built on Rotor"
 date = 2016-01-18
+
+[extra]
+
 source = { author = "Brian Anderson (brson)", link = { url = "https://users.rust-lang.org/t/basic-http-server-a-simple-http-file-server-built-on-rotor/4332", name = "Rust Users Forum" } }
 
 tags = [

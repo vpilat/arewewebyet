@@ -1,12 +1,15 @@
 +++
 title = "We are back, baby!"
 date = 2016-02-16
+
+[extra]
+
 source = { author = "ben" }
 +++
 
 It has been long, since you heard from us. But we are back – with an all new shiny and new approach of trying to answer the question:
 
-[![Are We Web yet](/assets/screenshot.png)](http://www.arewewebyet.org/)
+[![Are We Web yet](/static/screenshot.png)](http://www.arewewebyet.org/)
 
 
 ## A relaunch was needed
@@ -15,7 +18,7 @@ A lot has happened over the last year in Rust Web-Development since the first in
 
 ## More, detailed info
 
-![Package Info](/assets/about/package-info.png)
+![Package Info](/static/about/package-info.png)
 
 Among other things the new website gives much deeper insight on faster glance than you might notice. All package information is regularly synced with crates.io, the badges are even pulled _live_ when you access the website. Each section has its own small indicator, giving you an idea of what the curators think about that particular part in one single glyph – [more details about those in the help section of the about page](/about/#how-to-use-the-site).
 
@@ -23,7 +26,7 @@ Among other things the new website gives much deeper insight on faster glance th
 
 ### Curated comments
 
-![Comments](/assets/about/comments-shown.png)
+![Comments](/static/about/comments-shown.png)
 
 But a version info and a package link don't necessarily say much about a project. At least not as much as an insight about the project from someone, who's used it. Which is why the new version of the website features comments by the curators or otherwise found on the web on a per package basis. Toggled off by default to keep the design clean, those allow you to catch a small glimpse into the inside of what means to use that package.
 

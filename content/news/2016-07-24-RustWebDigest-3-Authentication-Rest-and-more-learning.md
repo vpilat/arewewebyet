@@ -1,6 +1,10 @@
 +++
 title = "RustWebDigest #3: Authentication, Rust and Rest and more learning"
+
+[extra]
+
 source = { author = "ben" }
+
 tags = [
   "logging",
   "rest"

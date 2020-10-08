@@ -1,6 +1,10 @@
 +++
 title = "RustWebDigest #2: Learn More with Blogs and Events"
+
+[extra]
+
 source = { author = "ben" }
+
 tags = [
   "frameworks",
   "digest",

@@ -1,6 +1,9 @@
 +++
 title = "Treasure ORM - initial design, with small working parts (mapper)"
 date = 2015-07-26
+
+[extra]
+
 source = { author = "phonkee", link = { url = "https://www.reddit.com/r/rust/comments/3embft/treasure_orm_initial_design_with_small_working/", name = "Rust Users Forum" } }
 
 tags = [

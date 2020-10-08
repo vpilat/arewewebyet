@@ -1,6 +1,9 @@
 +++
 title = "Handlebars templating libraries now works with Serde data"
 date = 2016-02-01
+
+[extra]
+
 source = { author = "sunng", link = { url = "https://www.reddit.com/r/rust/comments/43j6ei/handlebars_templating_libraries_now_works_with/", name = "Rust Users Forum" } }
 
 tags = [

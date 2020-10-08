@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% import "macros/author.html" as author %}
 {% block content %}
 
 <div class="news">
@@ -8,9 +8,9 @@
   <h1>{{page.title}}</h1>
 
   <div class="meta">
-    Published {{page.date | date}} {% if page.tags %}
+    Published {{page.date | date}} {% if page.extra.tags %}
     under <ul>
-      {% for tag in page.tags %}
+      {% for tag in page.extra.tags %}
       <li>
         {{tag}}
       </li>
@@ -20,25 +20,18 @@
   </div>
 
 
-  {% if page.source %}
+  {% if page.extra.source %}
   <blockquote class="">
     <cite>
 
       Posted
-      {% if page.source.link %}
-      on <a href="{{page.source.link.url}}">{{page.source.link.name}}</a>
+      {% if page.extra.source.link %}
+      on <a href="{{page.extra.source.link.url}}">{{page.extra.source.link.name}}</a>
       {% endif %}
 
-      {% if page.source.author %}
-      {% set author = site.data.authors[author] %}
-      {% if author %}
-      <img src="{{ author.img or '/asset/bashy-big.svg' }}">
-      <a {% if author.curator %} href="/curators/#{{cmt.author}}" {% else %} href="{{author.homepage}}" {% endif %}>
-        <span class="name">{{author.name}}</span></a>
-      {% else %}
-      by <span class="name">{{page.source.author}}</a>
-        {% endif %}
-        {% endif %} :
+      {% if page.extra.source.author %}
+      by <span class="name">{{page.extra.source.author}}</a>
+      {% endif %} :
     </cite>
     {{ page.content | safe }}
   </blockquote>
@@ -47,10 +40,10 @@
   {% endif %}
 </div>
 
-{% if page.author %}
+{% if authors[page.extra.source.author] %}
 <section class="authors">
   <h3>Author</h3>
-  {{ author(author=page.author) }}
+  {{ author::author(author=authors[page.extra.source.author]) }}
 </section>
 {% endif %}
 

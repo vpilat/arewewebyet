@@ -1,6 +1,9 @@
 +++
 title = "Announcing Diesel — A Safe, Extensible ORM and Query Builder for Rust"
 date = 2015-11-29
+
+[extra]
+
 source = { author = "Sean Griffin (sgrif)", link = { url = "https://users.rust-lang.org/t/announcing-diesel-a-safe-extensible-orm-and-query-builder-for-rust/3815", name = "Rust Users Forum" } }
 
 tags = [

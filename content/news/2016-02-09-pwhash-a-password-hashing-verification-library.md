@@ -1,6 +1,9 @@
 +++
 title = "Pwhash: a password hashing/verification library"
 date = 2016-02-09
+
+[extra]
+
 source = { author = "Ivan Nejgebauer (inejge)", link = { url = "https://users.rust-lang.org/t/pwhash-a-password-hashing-verification-library/4581", name = "Rust Users Forum" } }
 tags = [
   "crypto",

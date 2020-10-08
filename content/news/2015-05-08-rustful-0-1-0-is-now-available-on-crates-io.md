@@ -1,6 +1,9 @@
 +++
 title = "Rustful 0.1.0 is now available on crates.io"
 date = 2015-05-08
+
+[extra]
+
 source = { author = "ogeon", link = { url = "https://users.rust-lang.org/t/rustful-0-1-0-is-now-available-on-crates-io/1298", name = "Rust Users Forum" } }
 +++
 

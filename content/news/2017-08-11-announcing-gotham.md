@@ -1,6 +1,9 @@
 +++
 title = "Announcing Gotham"
 date = 2017-08-11
+
+[extra]
+
 source = { author = "Bradley Beddoes (bradleybeddoes)", link = { url = "https://users.rust-lang.org/t/announcing-gotham/12307", name = "Rust Users Forum" } }
 
 tags = [

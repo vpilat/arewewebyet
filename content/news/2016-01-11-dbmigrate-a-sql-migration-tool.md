@@ -1,6 +1,9 @@
 +++
 title = "Dbmigrate, a SQL migration tool"
 date = 2016-01-11
+
+[extra]
+
 source = { author = "Keats", link = { url = "https://users.rust-lang.org/t/dbmigrate-a-sql-migration-tool/4242", name = "Rust Users Forum" } }
 
 tags = [
