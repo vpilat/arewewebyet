@@ -1,7 +1,7 @@
-{% macro author(author) %}
-<div class="author">
+{% macro author(key, author) %}
+<div class="author" id="{{key}}">
   {% if author.curator %}
-  <a href="/curators/#{{author}}">
+  <a href="/curators/#{{key}}">
     {% endif %}
 
     <img class="avatar" src="{{author.img | default(value=get_url(path='/asset/bashy-big.svg'))}}" />
@@ -22,7 +22,7 @@
 
     {% if author.bio %}
     <p class="bio">
-      {{author.bio | safe }}
+      {{author.bio | markdown(inline=true) | safe }}
     </p>
     {% endif %}
 

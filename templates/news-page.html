@@ -40,11 +40,13 @@
   {% endif %}
 </div>
 
-{% if authors[page.extra.source.author] %}
+{% set authors = load_data(path="data/authors.toml") %}
+{% for key, value in authors %}
+{% if key == page.extra.source.author %}
 <section class="authors">
   <h3>Author</h3>
-  {{ author::author(author=authors[page.extra.source.author]) }}
+  {{ author::author(key=key,author=authors[key]) }}
 </section>
 {% endif %}
-
+{% endfor %}
 {% endblock content %}
