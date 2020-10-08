@@ -22,20 +22,6 @@ In the second row features the latest published version number, how often the pa
 
 Under that you can find the short description provided for that package.
 
-#### Comments
-
-![comments](/about/comments.png)
-
-Now some packages contain an extra `comments` sections. By default these are hidden to not clutter the page when you only want to have an overview of what's going on in a specific topic. But with just one click on the word, you can toggle the visibility of the comments for that package.
-
-![comments visible](/about/comments-shown.png)
-
-Each comment features the author, when it was written and what version they were talking about. Make sure to always check the version with the one you see above, things might have changed!
-
-Next to the text itself the side-bar is color coded, where blue and grey indicate informational content, green a positive review or even recommendation, yellow an warning and red an important problem or blocker.
-
-You can also toggle all comments with the little switch on the top right on each topic page. The setting will be saved in your browser and applied on every page load.
-
 ### Understanding the level indicator
 
 Throughout the app – mostly on section titles – you find the small `level indicators`: a colored glyph, which should give you a hint on the maturity of the subject overall as designated by the [curators](/curators/). The following indicators are available:

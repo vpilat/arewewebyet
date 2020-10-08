@@ -34,15 +34,6 @@
   <p class="pkg-desc">
     {{ pkg.description }}
   </p>
-  <!-- TODO : https://zola.discourse.group/t/manage-non-existing-file-when-running-load-data/521 -->
-  {# 
-    {% if not omit_comments %}
-      {% set comments = load_data(path="data/comments/" ~ pkg.id ~ ".yaml") %}
-      {% if comments %}
-        {{ comments(comments=comments) }}
-      {% endif %}
-    {% endif %}
-    #}
 </li>
 {% else %}
 <h1>PACKAGE MISSING: {{name}}</h1>
