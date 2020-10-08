@@ -2,7 +2,7 @@
 {% set pkg = load_data(path="data/pkgs/" ~ pkg_name ~ ".json") %}
 {% set pkg = pkg.crate %}
 {% if pkg %}
-<li id="pkg-{{pkg.id or pkg.name}}" class="pkg">
+<li id="pkg-{{pkg.id | default(value=pkg.name)}}" class="pkg">
   <span class="pkg-name"
     title="est. {{pkg.created_at | date }}, last updated: {{pkg.updated_at | date }}">{{pkg.name}}</span>
   {% if pkg.id %}
@@ -22,7 +22,7 @@
   <a class="pkg-link" title="repository" href="{{pkg.repository}}"><i class="fa fa-code"></i></a>
   {% endif %}
 
-  <a class="pkg-link action" title="permalink" href="#pkg-{{pkg.id or pkg.name}}"><i class="fa fa-hashtag"></i></a>
+  <a class="pkg-link action" title="permalink" href="#pkg-{{pkg.id | default(value=pkg.name)}}"><i class="fa fa-hashtag"></i></a>
 
   {% if pkg.id %}
   <p class="pkg-meta">
