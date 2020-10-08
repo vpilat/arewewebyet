@@ -37,18 +37,15 @@ do
   TARGET="_posts/$DATE-$SLUG.md"
 
   cat > $TARGET <<EOF
----
-layout: news
-
-title: "$TITLE"
-date: $DATE
++++
+title = "$TITLE"
+date = $DATE
 source:
   author: $CREATED_BY
   link:
     url: "$f"
     name: "Rust Users Forum"
----
-
++++
 $POST
 
 EOF

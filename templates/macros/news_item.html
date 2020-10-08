@@ -1,0 +1,5 @@
+{% macro news_item(post) %}
+<li class="news-item">
+  <span class="date">{{post.date | date }}</span><a href="{{ post.permalink }}" class="title">{{ post.title }}</a>
+</li>
+{% endmacro input %}

@@ -1,0 +1,41 @@
+{% macro package(pkg_name) %}
+{% set pkg = load_data(path="data/pkgs/" ~ pkg_name ~ ".json") %}
+{% set pkg = pkg.crate %}
+{% if pkg %}
+<li id="pkg-{{pkg.id | default(value=pkg.name)}}" class="pkg">
+  <span class="pkg-name"
+    title="est. {{pkg.created_at | date }}, last updated: {{pkg.updated_at | date }}">{{pkg.name}}</span>
+  {% if pkg.id %}
+  <a class="pkg-link" title="crates.io link" href="https://crates.io/crates/{{pkg.id}}"><i class="fa fa-cube"></i></a>
+  {% endif %}
+
+  {% if pkg.homepage %}
+  <a class="pkg-link" title="homepage" href="{{pkg.homepage}}"><i class="fa fa-home"></i></a>
+  {% endif %}
+
+
+  {% if pkg.documentation %}
+  <a class="pkg-link" title="documentation" href="{{pkg.documentation}}"><i class="fa fa-book"></i></a>
+  {% endif %}
+
+  {% if pkg.repository %}
+  <a class="pkg-link" title="repository" href="{{pkg.repository}}"><i class="fa fa-code"></i></a>
+  {% endif %}
+
+  <a class="pkg-link action" title="permalink" href="#pkg-{{pkg.id | default(value=pkg.name)}}"><i class="fa fa-hashtag"></i></a>
+
+  {% if pkg.id %}
+  <p class="pkg-meta">
+    <img src="https://img.shields.io/crates/v/{{pkg.id}}.svg" />
+    <img src="https://img.shields.io/crates/d/{{pkg.id}}.svg" />
+    <img src="https://img.shields.io/crates/l/{{pkg.id}}.svg" />
+  </p>
+  {% endif %}
+  <p class="pkg-desc">
+    {{ pkg.description }}
+  </p>
+</li>
+{% else %}
+<h1>PACKAGE MISSING: {{name}}</h1>
+{% endif %}
+{% endmacro package %}

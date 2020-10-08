@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-BASE="_data/pkgs"
+BASE="data/pkgs"
 FILES=`ls -1 $BASE`
 SERVER="https://crates.io/api/v1/crates/"
 NEW_VERSIONS=""
