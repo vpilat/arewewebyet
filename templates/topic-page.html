@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/news_item.html" as news %}
 {% import "macros/level.html" as level %}
 {% import "macros/packages.html" as packages %}
 
@@ -7,13 +8,13 @@
 <h1>{{page.title}} {{ level::level(level=page.extra.level) }}</h1>
 
 {% if page.extra.intro %}
-  {{ page.extra.intro | markdown | safe }}
+{{ page.extra.intro | markdown | safe }}
 {% endif %}
 
 {{ page.content | safe }}
 
 {% if page.extra.packages %}
-  {{ packages::packages(packages=page.extra.packages) }}
+{{ packages::packages(packages=page.extra.packages) }}
 {% endif %}
 
 {% if page.extra.upcoming %}
@@ -39,16 +40,29 @@ We are waiting for the following to reach maturity to be released on crates.io:
 {% endif %}
 
 {% if page.extra.news_tag %}
-{% if site.tags[page.news_tag] %}
-<h3>Related News</h3>
-<ul class="related-news">
-  {% for post in site.tags[page.news_tag] %}
-  <!-- Limit to three tags -->
-  {% if loop.index == 3 %}{% break %}{% endif %}
-  {{ news_item(post=post) }}
+
+{% set section = get_section(path="news/_index.md") %}
+{% set related_posts = [] %}
+
+{% for post in section.pages %}
+  {% if post.extra.tags %}
+  {% for tag in post.extra.tags %}
+    {% if tag == page.extra.news_tag %}
+      {% set_global related_posts = related_posts | concat(with=post) %}
+    {% endif %}
   {% endfor %}
-</ul>
+  {% endif %}
+{% endfor %}
+
+{% if related_posts.0 %}
+  <h3>Related News</h3>
+  <ul class="related-news">
+    {% for post in related_posts %}
+      {{ news::news_item(post=post) }}
+    {% endfor %}
+  </ul>
 {% endif %}
+
 {% endif %}
 
 <div class="alert-box">
