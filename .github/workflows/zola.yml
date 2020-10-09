@@ -15,4 +15,4 @@ jobs:
         # Target branch
         PAGES_BRANCH: zola-build
         # Provide personal access token
-        TOKEN: ${{ secrets.ZOLA_TOKEN }}
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
