@@ -1,18 +1,28 @@
-# On every push this script is executed
-on: push
-name: Build and deploy GH Pages
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  build:
-    name: shalzz/zola-deploy-action
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-    # Checkout
-    - uses: actions/checkout@master
-    # Build & deploy
-    - name: shalzz/zola-deploy-action
-      uses: shalzz/zola-deploy-action@v0.12.0
-      env:
-        # Target branch
-        PAGES_BRANCH: zola-build
-        # Provide personal access token
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - name: Install Zola
+        run: |
+          wget -q -O - \
+          "https://github.com/getzola/zola/releases/download/v0.12.2/zola-v0.12.2-x86_64-unknown-linux-gnu.tar.gz" \
+          | tar xzf - -C /usr/local/bin
+
+      - name: Build
+        run: zola build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: zola-build
