@@ -9,6 +9,7 @@ intro = "Proper Database support is crucial for modern web development. This pag
 
 drivers = [
   "mysql",
+  "couchbase",
   "mysql_async",
   "postgres",
   "pleingres",
