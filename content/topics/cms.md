@@ -9,9 +9,12 @@ intro = "Basic pages and compiling source content into full websites to be serve
 
 packages = [
   "cobalt-bin",
-  "mdbook",
-  "zola"
+  "mdbook"
 ]
 
 news_tag = "cms"
 +++
+
+<h2><a href="https://github.com/getzola/zola">Zola:</a></h2>
+
+A fast static site generator in a single binary with everything built-in. This very site is generated with zola!
