@@ -22,14 +22,25 @@
   <a class="pkg-link" title="repository" href="{{pkg.repository}}"><i class="fa fa-code"></i></a>
   {% endif %}
 
-  <a class="pkg-link action" title="permalink" href="#pkg-{{pkg.id | default(value=pkg.name)}}"><i class="fa fa-hashtag"></i></a>
+  <a class="pkg-link action" title="permalink" href="#pkg-{{pkg.id | default(value=pkg.name)}}"><i
+      class="fa fa-hashtag"></i></a>
 
   {% if pkg.id %}
   <p class="pkg-meta">
     <img src="https://img.shields.io/crates/v/{{pkg.id}}.svg" />
     <img src="https://img.shields.io/crates/d/{{pkg.id}}.svg" />
     <img src="https://img.shields.io/crates/l/{{pkg.id}}.svg" />
-  </p>
+    {% if pkg.repository %}
+      <!-- Get package repository in user/repo format -->
+      {% set repo = pkg.repository 
+        | trim_start_matches(pat="https://bitbucket.org/") 
+        | trim_start_matches(pat="https://github.com/") 
+        | trim_start_matches(pat="https://gitlab.com/") 
+        | trim_end_matches(pat=".git") 
+      %}
+    <img src="https://img.shields.io/github/last-commit/{{repo}}.svg">
+    {% endif %}
+    </p>
   {% endif %}
   <p class="pkg-desc">
     {{ pkg.description }}
