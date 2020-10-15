@@ -42,28 +42,9 @@ Aside from the layout and it's title, a topic also has the "maturity" level –�
 Anything after the second `+++` is then rendered after the title in the top of the page, before the packages are listed. If no packages are found, none are rendered. Which might be what you want, especially if you want to split them up into your own sections. In that case, however, you have to do the rendering yourself at the moment. Take a look at the `content/topics/services.md` for an example on how to achieve that.
 
 
-## Data Structure
+## Data Handling
 
-We are using json datafiles to manage package data. These are loaded into templates with the `load_data()` macro provided by zola.
-
-We store our package-crate information in the `data/pkgs/` folder, where each package is referenced by its id and the `.json` extension. The information inside that file is the direct export of crates.io API request for that package.
-
-These packages are then referenced by that id in the templates and site
-
-### Fetch package data
-
-We have a bash script which lets you easily fetch the latest package information – you need to have `curl` installed for it. You can run it to fetch the latest info like this (don't forget the `.json` suffix):
-
-```bash
-bash scripts/update_crates.sh hyper.json
-```
-
-To update all crates already listed, you can run
-
-```bash
-bash scripts/update_crates.sh `ls -1 data/pkgs/`
-```
-
+We load data from the crates.io API directly during the build proccess using the `load_data(url="")` macro provided by zola.
 
 ## Template Includes
 
