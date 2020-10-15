@@ -3,9 +3,9 @@ title = "Crypto"
 
 [extra]
 
-level = 3
+level = 1
 
-intro = "Cryptography is a corner stone of a trusted web. Without it many services could not be offered reliably. While rust has a strong RNG, the main suite in use isn't pure rust but the (in)famous openssl."
+intro = "Cryptography is a corner stone of a trusted web. Without it many services could not be offered  reliably. Rust has strong cryptography libraries. Many of these are managed by [Rust Crypto](https://github.com/RustCrypto), an organization that maintains cryptography algorithms written in pure Rust."
 
 suites = [
   "openssl",
@@ -20,12 +20,6 @@ rng = [
   "uuid"
 ]
 
-passwords = [
-  "bcrypt",
-  "djangohashers",
-  "pwhash"
-]
-
 tls = [
   "rustls",
   "tokio-openssl",
@@ -36,32 +30,33 @@ tls = [
 ]
 
 hashing = [
+  "bcrypt",
+  "blake2",
+  "djangohashers",
+  "hmac",
   "fnv",
   "twox-hash",
   "md5",
-  "djangohashers",
-  "blake2-rfc",
-  "bcrypt",
+  "sha2",
   "pwhash"
 ]
 
 algorithms = [
-  "blake2-rfc",
+  "aes-gcm",
   "bulletproofs",
+  "chacha20poly1305",
   "curve25519-dalek",
   "ed25519-dalek",
-  "merlin",
   "secp256k1",
   "subtle",
   "twox-hash",
-  "x25519-dalek",
-  "zkp"
+  "x25519-dalek"
 ]
 
 tooling = [
   "tempfile",
   "cookie",
-  "frank_jwt"
+  "jsonwebtoken"
 ]
 
 newstag = "crypto"
@@ -69,7 +64,7 @@ newstag = "crypto"
 
 <div>
 
-<h2>Suites {{ level(level=2) }}</h2>
+<h2>Suites {{ level(level=1) }}</h2>
 
 {{ packages(packages='suites') }}
 
@@ -77,27 +72,19 @@ newstag = "crypto"
 
 {{ packages(packages='rng') }}
 
-<h2>Password  {{ level(level=3) }}</h2>
-
-{{ packages(packages='passwords') }}
-
-<h2>TLS  {{ level(level=3) }}</h2>
-
-{{ packages(packages='tls') }}
-
-<h2>Tooling  {{ level(level=4) }}</h2>
-
-<p><em>Tooling is great, just a little scarce...</em></p>
-
-{{ packages(packages='tooling') }}
-
-<h2>Also</h2>
-
-<h3>Hashing  {{ level(level=3) }}</h3>
+<h2>Hashing  {{ level(level=1) }}</h2>
 
 {{ packages(packages='hashing') }}
 
-<h3>Algorithms  {{ level(level=3) }}</h3>
+<h2>Algorithms  {{ level(level=1) }}</h2>
 
 {{ packages(packages='algorithms') }}
+
+<h2>TLS  {{ level(level=1) }}</h2>
+
+{{ packages(packages='tls') }}
+
+<h2>Tooling  {{ level(level=3) }}</h2>
+
+{{ packages(packages='tooling') }}
 </div>
