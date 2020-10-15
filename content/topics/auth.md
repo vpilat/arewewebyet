@@ -15,7 +15,6 @@ packages = [
   "oxide-auth",
   "inth-oauth2",
   "yup-oauth2",
-  "frank_jwt",
   "otpauth",
   "asap"
 ]
