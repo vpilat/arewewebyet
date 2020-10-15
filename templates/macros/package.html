@@ -1,7 +1,7 @@
 {% macro package(pkg_name) %}
-{% set pkg = load_data(path="data/pkgs/" ~ pkg_name ~ ".json") %}
-{% set pkg = pkg.crate %}
+{% set pkg = load_data(url="https://crates.io/api/v1/crates/" ~ pkg_name, format="json") %}
 {% if pkg %}
+  {% set pkg = pkg.crate %}
 <li id="pkg-{{pkg.id | default(value=pkg.name)}}" class="pkg">
   <span class="pkg-name"
     title="est. {{pkg.created_at | date }}, last updated: {{pkg.updated_at | date }}">{{pkg.name}}</span>
@@ -45,6 +45,6 @@
   </p>
 </li>
 {% else %}
-<h1>PACKAGE MISSING: {{name}}</h1>
+<h1>PACKAGE MISSING: {{pkg_name}}</h1>
 {% endif %}
 {% endmacro package %}
