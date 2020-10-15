@@ -40,7 +40,7 @@
   {% endif %}
 </div>
 
-{% set authors = load_data(path="data/authors.toml") %}
+{% set authors = load_data(path="authors.toml") %}
 {% for key, value in authors %}
 {% if key == page.extra.source.author %}
 <section class="authors">
