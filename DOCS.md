@@ -27,23 +27,21 @@ To make contributing easy we use markdown, where we can. So you'll find all topi
 A `topic` in this website refers to a distinct subset of the web ecosystem to investigate. For example, JSON is a topic and the file might look like this:
 
 ```yaml
----
-layout: topic
-title: "JSON Support"
++++
+title = "JSON Support"
 
-level: 3
+level =3
 packages:
  - serde_json
  - json_macros
  - jsonway
  - weakjson
  - jsonrpc
----
-```
++++```
 
 Aside from the layout and it's title, a topic also has the "maturity" level – an indicator from 0-6, which indicates how mature the curators believe this topic to be in rust (0 being the most mature and tested). Usually a topic also comes with a list of packages. These reference the packages-filenames as mentioned below in the data structures section.
 
-Anything after the second `---` is then rendered after the title in the top of the page, before the packages are listed. If no packages are found, none are rendered. Which might be what you want, especially if you want to split them up into your own sections. In that case, however, you have to do the rendering yourself at the moment. Take a look at the `topics/services.md` for an example on how to achieve that.
+Anything after the second `+++` is then rendered after the title in the top of the page, before the packages are listed. If no packages are found, none are rendered. Which might be what you want, especially if you want to split them up into your own sections. In that case, however, you have to do the rendering yourself at the moment. Take a look at the `topics/services.md` for an example on how to achieve that.
 
 
 ## Data Structure
