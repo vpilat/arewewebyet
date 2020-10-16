@@ -7,7 +7,7 @@
 
 <p><a href="/">Are We Web Yet</a> (AWWY) is curated by:</p>
 
-{% set authors = load_data(path="data/authors.toml") %}
+{% set authors = load_data(path="authors.toml") %}
 {% for key, value in authors %}
   {% if value.curator %}
     {{ author::author(key=key,author=authors[key]) }}
