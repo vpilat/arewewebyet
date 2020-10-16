@@ -9,14 +9,13 @@
 All contributions are welcome to the project. The curators try to review all pull requests as quickly as possible. However, this is a volunteer run project, so please be patient with it. If you are planning on submitting bigger changes to the project, please open a GitHub issue first and talk to the team before submitting to make sure your work will be accepted.
 
 Topics are located in the `context/topics` directory. Every topic contains an array of crates in the `extra` section of it's frontmatter:
-```toml
+```
 +++
 [extra]
 
 packages = [
   "actix-web",
-  "rocket",
-  ...
+  "rocket"
 ]
 +++
 ```
