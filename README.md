@@ -19,7 +19,7 @@ packages = [
 ]
 +++
 ```
-To add or remove crates from a topic, simple add or remove the crate from it's package array. For more detailed documentation, see [the docs](./DOCS.md).
+To add or remove crates from a topic, simple add or remove the crate from it's package array. For more detailed documentation, see [the contributing docs](./CONTRIBUTING.md).
 
 ## Code of Conduct
 
