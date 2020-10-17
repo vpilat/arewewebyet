@@ -9,10 +9,6 @@ The curators might reject any contribution without stating a reason, but especia
 contributor in question is not following the [code of conduct](./CODE_OF_CONDUCT.md) or doesn't follow the 
 right procedure outlined below.
 
-Now open a browser on `http://localhost:1111` and you'll be able to see the homepage in its latest version. 
-Any changes you make immediately rerender the websites after saving the file, you just need to refresh the 
-browser.
-
 ## Adding or Removing a package
 
 If a package isn't listed on the website yet, feel free to send us a pull-request for it. The only requirement 
@@ -68,6 +64,10 @@ To compile the documents, run from the main directory
 ```bash
 zola serve
 ```
+
+Now open a browser on `http://localhost:1111` and you'll be able to see the homepage in its latest version. 
+Any changes you make immediately rerender the websites after saving the file, you just need to refresh the 
+browser.
 
 To generate a production build, run:
 
