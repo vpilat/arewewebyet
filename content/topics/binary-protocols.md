@@ -14,7 +14,8 @@ packages = [
   "protobuf",
   "prost",
   "tarpc",
-  "tonic"
+  "tonic",
+  "thrift"
 ]
 
 
