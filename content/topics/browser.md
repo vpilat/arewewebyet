@@ -10,7 +10,8 @@ intro = "The Webbrowser is the bastion, the holy grail of web development and on
 
 packages = [
   "fantoccini",
- "headless_chrome"
+  "headless_chrome",
+  "thirtyfour"
 ]
 
 news_tag = "browser"
