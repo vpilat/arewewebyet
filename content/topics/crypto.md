@@ -36,7 +36,7 @@ hashing = [
   "hmac",
   "fnv",
   "twox-hash",
-  "md5",
+  "md-5",
   "sha2",
   "pwhash"
 ]
