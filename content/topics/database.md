@@ -3,7 +3,7 @@ title = "Database"
 
 [extra]
 
-level = 2
+level = 1
 
 intro = "Proper Database support is crucial for modern web development. This page gives an overview of the various drivers, ORMs, integrations and tools."
 
