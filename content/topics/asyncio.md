@@ -16,6 +16,7 @@ packages = [
   "futures",
   "futures-intrusive",
   "futures-timer",
+  "smol",
   "stream-cancel",
   "tokio",
   "tracing"
