@@ -1,5 +1,5 @@
 +++
-title = "Database drivers"
+title = "Database"
 
 [extra]
 
@@ -12,22 +12,18 @@ drivers = [
   "couchbase",
   "mysql_async",
   "postgres",
-  "pleingres",
   "redis",
-  "redis-async",
   "darkredis",
   "rusqlite",
   "tokio-postgres",
   "leveldb",
   "rocksdb",
   "couchdb",
-  "etcd",
-  "influent",
+  "influx_db_client",
   "cassandra-cpp",
   "cdrs",
   "memcache",
   "mongodb",
-  "mongo_driver",
   "sqlx"
 ]
 
@@ -40,14 +36,15 @@ orms = [
 
 pools = [
     "mobc",
+    "deadpool",
+    "bb8",
     "r2d2"
 ]
 
 tools = [
+  "diesel_migrations",
   "migrant",
-  "refinery",
-  "schemamama",
-  "trek"
+  "refinery"
 ]
 
 newstag = "database"
@@ -68,5 +65,3 @@ newstag = "database"
 <h2 id="tooling">Tooling</h2>
 
 {{ packages(packages='tools') }}
-
-
