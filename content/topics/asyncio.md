@@ -3,7 +3,7 @@ title = "Async I/O"
 
 [extra]
 
-level = 3
+level = 1
 
 intro = "List of different packages, related to asynchronous I/O and `async/await`"
 
