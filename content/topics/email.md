@@ -3,9 +3,9 @@ title = "Email"
 
 [extra]
 
-level = 3
+level = 4
 
-intro = "What would the web be without Email? One of the easiest authentication and notification systems. Yet, rust support isn't particular great, yet. There is stuff, but there is also room to improve it."
+intro = "What would the web be without Email? It is one of the mose widely used communication, authentication, and notification systems. There are rust crates providing smtp and imap clients, as well integrations with third party email delivery services."
 
 packages = [
   "async-imap",
@@ -14,7 +14,8 @@ packages = [
   "imap-proto",
   "lettre",
   "sendgrid",
-  "samotop"
+  "samotop",
+  "mailchimp"
 ]
 
 newstag = "email"
