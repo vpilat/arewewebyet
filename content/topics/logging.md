@@ -9,14 +9,13 @@ level = 1
 
 packages = [
   "log",
+  "console_log",
   "env_logger",
   "pretty_env_logger",
   "fern",
   "log4rs",
-  "logger",
   "syslog",
   "flexi_logger",
-  "json_logger",
   "sentry",
   "slog"
 ]
