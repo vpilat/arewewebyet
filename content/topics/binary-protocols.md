@@ -4,17 +4,19 @@ title = "Binary protocols"
 
 [extra]
 
-level = 2
+level = 1
 
 intro = "Binary protocol support"
 
 packages = [
+  "avro-rs",
   "capnp",
   "grpc",
   "protobuf",
   "prost",
   "tarpc",
   "tonic",
+  "flatbuffers",
   "thrift"
 ]
 
