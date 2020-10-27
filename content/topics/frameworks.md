@@ -19,6 +19,7 @@ server = [
 ]
 
 frontend = [
+  "iced",
   "mogwai",
   "percy",
   "sauron",
