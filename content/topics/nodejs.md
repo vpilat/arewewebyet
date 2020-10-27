@@ -1,16 +1,16 @@
 +++
-title = "Node.js/Electron"
+title = "Node.js"
 
 [extra]
 
-level = 3
+level = 0
 
-intro = "Node.js and / or Electron specific packages and bindings. You can also use WebAssembly."
+intro = "Rust can be used to write writing fast and safe native Node.js modules through bindings to the V8 engine!"
 
 packages = [
   "cargo-node",
   "neon",
-  "tauri",
+  "node-bindgen",
   "webbundle",
 ]
 
