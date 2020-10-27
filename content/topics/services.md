@@ -3,26 +3,25 @@ title = "External Services"
 
 [extra]
 
-intro = "The modern web development stack doesn't only need a web-server but is often built on a range of external services to provide specific features, from worker queues to search and pubsub. Rust support for these is certainly not the greatest, but there are popular crates for the most popular services."
+intro = "The modern web development stack doesn't only need a web-server but is often built on a range of external services to provide specific features, from worker queues to search and pubsub. There are many mature crates for popular external services. For services accessed through a Web API, such as Cloud SDKs, see: [External Web APIs](https://www.arewewebyet.org/topics/web-apis/) and for database support, see: [Databases](https://www.arewewebyet.org/topics/database/)"
 
-level = 4
-
-cloud = [
-  "rusoto_core",
-  "azure_sdk_for_rust"
-]
+level = 1
 
 queues = [
-  "amqp",
-  "beanstalkd",
-  "celery",
-  "kafka",
   "lapin",
-  "stomp"
+  "tokio-amqp",
+  "beanstalkc",
+  "celery",
+  "rdkafka",
+  "nats",
+  "tmq"
 ]
 
-queries = [
-  "datafusion"
+data = [
+  "arrow",
+  "arrow-flight",
+  "datafusion",
+  "parquet"
 ]
 
 search = [
@@ -36,23 +35,15 @@ pubsub = [
   "redis"
 ]
 
-connectors = [
-  "efflux"
-]
-
 newstag = "services"
 +++
-<h2>Cloud SDK</h2>
-
-{{ packages(packages='cloud') }}
-
 <h2>Worker Queue</h2>
 
 {{ packages(packages='queues') }}
 
-<h2>Query engines</h2>
+<h2>Data Processing</h2>
 
-{{ packages(packages='queries') }}
+{{ packages(packages='data') }}
 
 <h2>Search Services</h2>
 
@@ -61,7 +52,3 @@ newstag = "services"
 <h2>Pubsub</h2>
 
 {{ packages(packages='pubsub') }}
-
-<h2>Connectors</h2>
-
-{{ packages(packages='connectors') }}
