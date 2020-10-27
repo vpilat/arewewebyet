@@ -53,12 +53,6 @@ algorithms = [
   "x25519-dalek"
 ]
 
-tooling = [
-  "tempfile",
-  "cookie",
-  "jsonwebtoken"
-]
-
 newstag = "crypto"
 +++
 
@@ -83,8 +77,3 @@ newstag = "crypto"
 <h2>TLS  {{ level(level=1) }}</h2>
 
 {{ packages(packages='tls') }}
-
-<h2>Tooling  {{ level(level=3) }}</h2>
-
-{{ packages(packages='tooling') }}
-</div>
