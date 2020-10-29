@@ -1,5 +1,5 @@
 +++
-title = "Web Development Frameworks"
+title = "Web Frameworks"
 
 [extra]
 
