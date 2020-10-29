@@ -1,17 +1,17 @@
 +++
-title = "WebAssembly runtimes"
+title = "WebAssembly Runtimes"
 
 [extra]
 
-level = 3
+level = 2
 
-intro = "List of standalone WebAssembly runtimes"
+intro = "While the main showcase of WebAssembly initially was the web browser, there is new exciting work on using it outside too. Here is a list of WebAssembly runtimes that are compatible with Rust."
 
 packages = [
   "lucet-runtime",
-  "lucet-wasi",
   "wasmer-runtime",
-  "wasmtime"
+  "wasmtime",
+  "watt"
 ]
 
 newstag = "webassembly-runtimes"
