@@ -12,6 +12,7 @@ packages = [
   "httpmock",
   "insta",
   "mockito",
+  "mock_derive",
   "mockall",
   "mocktopus",
   "proptest",
