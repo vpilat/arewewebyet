@@ -18,7 +18,7 @@ drivers = [
   "tokio-postgres",
   "leveldb",
   "rocksdb",
-  "couchdb",
+  "sled",
   "influx_db_client",
   "cassandra-cpp",
   "cdrs",
