@@ -15,7 +15,8 @@ packages = [
   "oxide-auth",
   "yup-oauth2",
   "otpauth",
-  "asap"
+  "asap",
+  "oso",
 ]
 
 news_tag = "auth"
