@@ -8,14 +8,15 @@ intro = "Authorization and Authentication are a big deal for web development. Ta
 level = 1
 
 packages = [
+  "asap",
   "cookie",
   "jsonwebtoken",
   "oauth2",
   "openssl",
-  "oxide-auth",
-  "yup-oauth2",
+  "oso",
   "otpauth",
-  "asap"
+  "oxide-auth",
+  "yup-oauth2"
 ]
 
 news_tag = "auth"
