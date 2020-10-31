@@ -17,7 +17,8 @@ packages = [
   "syslog",
   "flexi_logger",
   "sentry",
-  "slog"
+  "slog",
+  "tracing"
 ]
 
 newstag = "logging"
