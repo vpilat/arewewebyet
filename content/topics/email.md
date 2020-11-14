@@ -15,7 +15,8 @@ packages = [
   "lettre",
   "sendgrid",
   "samotop",
-  "mailchimp"
+  "mailchimp",
+  "mrml"
 ]
 
 newstag = "email"
