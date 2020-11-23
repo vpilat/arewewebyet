@@ -16,7 +16,8 @@ packages = [
   "serde_json",
   "serde_yaml",
   "serde_bytes",
-  "toml"
+  "toml",
+  "quick-xml"
 ]
 
 newstag = "serialiser"
