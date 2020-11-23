@@ -10,7 +10,6 @@ level = 0
 packages = [
   "async-bincode",
   "bincode",
-  "flatbuffers",
   "rmp",
   "serde",
   "serde_json",
