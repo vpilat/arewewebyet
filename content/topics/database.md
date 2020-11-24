@@ -47,6 +47,10 @@ tools = [
   "refinery"
 ]
 
+upcoming = [
+  { name = "Oxidizer", url = "https://github.com/oxidizer-rs/oxidizer", desc = "A Rust ORM based on tokio-postgres and refinery" }
+]
+
 newstag = "database"
 +++
 
