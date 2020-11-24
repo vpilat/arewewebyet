@@ -19,7 +19,7 @@
 
 {% if page.extra.upcoming %}
 <h4 class="upcoming">Upcoming</h4>
-We are waiting for the following to reach maturity to be released on crates.io:
+The following crates look awesome! But they have not yet reached maturity.
 <ul class="upcoming">
   {% for upcoming in page.extra.upcoming %}
   <li> <a href="{{upcoming.url}}">{{upcoming.name}}</a> {{upcoming.desc | markdown | safe }} </li>
