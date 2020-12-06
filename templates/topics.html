@@ -2,23 +2,25 @@
 {% import "macros/level.html" as level %}
 
 {% block content %}
+<article class="article">
 
-<h1>{{ section.title }}</h1>
+  <h1>{{ section.title }}</h1>
 
-<div>
-  {% for page in section.pages %}
+  <div>
+    {% for page in section.pages %}
 
-  <h2>
-    <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
-    {{ level::level(level=page.extra.level) }}
-  </h2>
+    <h2>
+      <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
+      {{ level::level(level=page.extra.level) }}
+    </h2>
 
-  {% if page.extra.intro %}
+    {% if page.extra.intro %}
     {{ page.extra.intro | markdown | safe }}
-  {% endif %}
+    {% endif %}
 
-  {% endfor %}
+    {% endfor %}
 
-</div>
+  </div>
 
+</article>
 {% endblock %}

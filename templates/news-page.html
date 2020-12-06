@@ -2,51 +2,51 @@
 {% import "macros/author.html" as author %}
 {% block content %}
 
-<div class="news">
+<article class="article">
+  <div class="news">
+    <h1>{{page.title}}</h1>
 
-
-  <h1>{{page.title}}</h1>
-
-  <div class="meta">
-    Published {{page.date | date}} {% if page.extra.tags %}
-    under <ul>
+    <div class="meta">
+      Published {{page.date | date}} {% if page.extra.tags %}
+      under <ul>
       {% for tag in page.extra.tags %}
       <li>
         {{tag}}
       </li>
       {% endfor %}
     </ul>
+      {% endif %}
+    </div>
+
+
+    {% if page.extra.source %}
+    <blockquote class="">
+      <cite>
+
+        Posted
+        {% if page.extra.source.link %}
+        on <a href="{{page.extra.source.link.url}}">{{page.extra.source.link.name}}</a>
+        {% endif %}
+
+        {% if page.extra.source.author %}
+        by <span class="name">{{page.extra.source.author}}</a>
+        {% endif %} :
+      </cite>
+      {{ page.content | safe }}
+    </blockquote>
+    {% else %}
+    {{ page.content | safe }}
     {% endif %}
   </div>
 
-
-  {% if page.extra.source %}
-  <blockquote class="">
-    <cite>
-
-      Posted
-      {% if page.extra.source.link %}
-      on <a href="{{page.extra.source.link.url}}">{{page.extra.source.link.name}}</a>
-      {% endif %}
-
-      {% if page.extra.source.author %}
-      by <span class="name">{{page.extra.source.author}}</a>
-      {% endif %} :
-    </cite>
-    {{ page.content | safe }}
-  </blockquote>
-  {% else %}
-  {{ page.content | safe }}
+  {% set authors = load_data(path="authors.toml") %}
+  {% for key, value in authors %}
+  {% if key == page.extra.source.author %}
+  <section class="authors">
+    <h3>Author</h3>
+    {{ author::author(key=key,author=authors[key]) }}
+  </section>
   {% endif %}
-</div>
-
-{% set authors = load_data(path="authors.toml") %}
-{% for key, value in authors %}
-{% if key == page.extra.source.author %}
-<section class="authors">
-  <h3>Author</h3>
-  {{ author::author(key=key,author=authors[key]) }}
-</section>
-{% endif %}
-{% endfor %}
+  {% endfor %}
+</article>
 {% endblock content %}

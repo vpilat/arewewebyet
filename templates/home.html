@@ -9,10 +9,10 @@
   </div>
 </div>
 
-<div id="main">
+<article class="article article--banner-spacing">
   <h1>Are we <em>web</em> yet?</h1>
 
-  <p><strong>Yes! And it's freaking fast!</strong></p>
+  <p class="tagline"><strong>Yes! And it's freaking fast!</strong></p>
 
   <h2>Can I replace my Rails/Django/Flask already?</h2>
 
@@ -65,9 +65,11 @@
       href="/topics/templating/">templating</a> {{ level::level(level=templating.extra.level) }}, and <a href="/topics/email/">email</a>
     {{ level::level(level=email.extra.level) }}.</p>
 
+  <p>
   While development might not be as smooth as something like Rails or Django, the Rust web development ecosystem and
   community is engaged and very helpful. A lot of work has been put into the web in the past few years, and we're getting
   there!
+  </p>
 
   {% set webassembly = get_page(path="topics/webassembly.md") %}
 
@@ -142,6 +144,6 @@
     <li>{{ level::level(level=5) }}: barely there, needs serious work</li>
     <li>{{ level::level(level=6) }}: basically nonexistent</li>
   </ul>
-</div>
+</article>
 
 {% endblock content %}
