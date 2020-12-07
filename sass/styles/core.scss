@@ -1,0 +1,48 @@
+@import "_font-mixins";
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  @include interpolate(font-size, 320px, 1366px, 16px, 24px);
+}
+
+header {
+  line-height: 2;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+  color: #666;
+  font-weight: 300;
+  @include interpolate(font-size, 320px, 1366px, 46px, 72px);
+}
+
+html {
+  font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: white;
+  background-repeat: no-repeat;
+  color: #202020;
+  line-height: 1.6;
+  font-weight: 300;
+  width: 100%;
+}
+
+@media print {
+  :root {
+    color: #000;
+  }
+}
