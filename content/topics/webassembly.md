@@ -25,7 +25,8 @@ packages=  [
   "walrus",
   "wasmi",
   "wasm-pack",
-  "woz"
+  "woz",
+  "trunk"
 ]
 
 newstag = "webassembly"
