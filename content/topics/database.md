@@ -13,6 +13,7 @@ drivers = [
   "mysql_async",
   "postgres",
   "redis",
+  "rbatis",
   "darkredis",
   "rusqlite",
   "tokio-postgres",
