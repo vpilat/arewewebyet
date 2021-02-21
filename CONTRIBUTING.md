@@ -13,7 +13,7 @@ right procedure outlined below.
 
 If a package isn't listed on the website yet, feel free to send us a pull-request for it. The only requirement 
 is that the pacakge is related to the web-stack, open source and is publicly available via [crates.io](http://www.crates.io).
-Packages are seperated into seperate `topics`. Topics are located in the `context/topics` directory. Every topic contains 
+Packages are separated into separate `topics`. Topics are located in the `context/topics` directory. Every topic contains 
 TOML frontmatter, from which the HTML is generated:
 
 ```
@@ -94,7 +94,7 @@ level = 0
 
 Some topics do not have a `packages` array. These topics contain content after the frontmatter (after the second `+++`)
 Anything after the second `+++` is then rendered after the title in the top of the page, before the packages are listed.
-For example, the database topic is seperated into `drivers`, and `orms`:
+For example, the database topic is separated into `drivers`, and `orms`:
 ```
 +++
 [extra]
