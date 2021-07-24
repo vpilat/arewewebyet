@@ -9,6 +9,7 @@ level = 1
 
 packages = [
   "asap",
+  "casbin",
   "cookie",
   "jsonwebtoken",
   "oauth2",
