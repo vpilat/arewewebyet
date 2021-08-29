@@ -15,7 +15,8 @@ server = [
   "rocket",
   "tide",
   "thruster",
-  "warp"
+  "warp",
+  "axum"
 ]
 
 frontend = [
