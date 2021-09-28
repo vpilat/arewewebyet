@@ -32,6 +32,7 @@ orms = [
   "diesel",
   "quaint",
   "rustorm",
+  "sea-orm",
   "tql"
 ]
 
