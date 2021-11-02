@@ -30,7 +30,6 @@ drivers = [
 
 orms = [
   "diesel",
-  "quaint",
   "rustorm",
   "sea-orm",
   "tql"
@@ -46,6 +45,7 @@ pools = [
 tools = [
   "diesel_migrations",
   "migrant",
+  "quaint",
   "refinery"
 ]
 
