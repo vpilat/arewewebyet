@@ -18,7 +18,8 @@ packages = [
   "proptest",
   "quickcheck",
   "rstest",
-  "tokio-test"
+  "tokio-test",
+  "wiremock"
 ]
 
 news_tag = "testing"
