@@ -27,6 +27,7 @@ frontend = [
   "percy",
   "sauron",
   "seed",
+  "sycamore",
   "yew"
 ]
 
