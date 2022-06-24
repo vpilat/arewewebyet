@@ -9,7 +9,6 @@ level = 2
 
 packages = [
  "azure_sdk_for_rust",
- "aspotify",
  "rspotify",
  "twitter-api",
  "serenity",
