@@ -21,6 +21,7 @@ server = [
 ]
 
 frontend = [
+  "leptos",
   "dioxus",
   "iced",
   "sauron",
