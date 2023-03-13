@@ -43,7 +43,7 @@ added soon.
 You have an important announcement or latest news related to web development in rust and you'd like to share 
 them with the wider audience of this website? GREAT, here is how you can do that:
 
-ust create a new file in `content/news` - we recommend to use Markdown. Make sure you set the `title`, the 
+Just create a new file in `content/news` - we recommend to use Markdown. Make sure you set the `title`, the
 `date`, the `source` and add all appropriate `tags`. Once you are done, please submit all of that as a pull-request 
 and we'll get right on it!
 
