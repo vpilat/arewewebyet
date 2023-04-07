@@ -22,7 +22,6 @@ packages = [
   "pulldown-cmark",
   "ramhorns",
   "ructe",
-  "typed-html",
   "comrak"
 ]
 
