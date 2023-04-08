@@ -5,7 +5,7 @@ title = "CMS"
 
 level = 4
 
-intro = "Managing digital content is a fundemental part of the web as we have it today. Content management systems aim to make it easier to create, update, and serve digital content. Currently, the Rust CMS ecosytem consists only of static site generators, which serve as frameworks for creating websites from static content files."
+intro = "Managing digital content is a fundamental part of the web as we have it today. Content management systems aim to make it easier to create, update, and serve digital content. Currently, the Rust CMS ecosytem consists only of static site generators, which serve as frameworks for creating websites from static content files."
 
 static-site-generators = [
   "blades",
