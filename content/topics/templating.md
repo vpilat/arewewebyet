@@ -22,6 +22,7 @@ packages = [
   "pulldown-cmark",
   "ramhorns",
   "ructe",
+  "axohtml",
   "comrak"
 ]
 
