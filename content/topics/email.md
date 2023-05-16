@@ -15,7 +15,7 @@ packages = [
   "imap-proto",
   "lettre",
   "mailchimp",
-  "mrml"
+  "mrml",
   "samotop",
   "sendgrid",
 ]
