@@ -11,12 +11,13 @@ packages = [
   "async-imap",
   "email",
   "imap",
+  "imap-codec",
   "imap-proto",
   "lettre",
-  "sendgrid",
-  "samotop",
   "mailchimp",
-  "mrml"
+  "mrml",
+  "samotop",
+  "sendgrid",
 ]
 
 newstag = "email"
