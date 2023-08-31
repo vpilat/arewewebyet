@@ -25,6 +25,12 @@ missing = [
 
 There are [official docker images](https://github.com/rust-lang-nursery/docker-rust) for rust ([`rust`](https://hub.docker.com/_/rust/)) with over 10+ Million downloads! There are also nightly images ([`rustlang/rust`](https://hub.docker.com/r/rustlang/rust/)) if your application requires it. If you use docker's [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/), you can build your application binary and then copy it into a container. This allows you to avoid deploying the entire compilation toolchain with your web application.
 
+<h2>Cloud-Native Buildpacks {{ level(level=3) }}</h2>
+
+[Cloud-Native Buildpacks](https://buildpacks.io/) is a CNCF project that provides a specification for automatically transforming source code into OCI images you can run on any cloud. Paketo Buildpacks, a popular implementation of the Cloud-Native Buildpacks specification, has a [Rust buildpack](https://github.com/paketo-community/rust/) that supports transforming your Rust source code into OCI images.
+
+Present features: pick your Rust version including nightly, automatically detects your binaries and configures the container to run them, supports projects with multiple binaries & workspace projects, supports installing additional tools via `cargo install`, can optionally install `tini` for proper pid1 handling, can generate images as small as a few MB plus your binaries, and loads of caching for fast rebuilds.
+
 <h2>Vercel {{ level(level=3) }}</h2>
 
 [▲ Vercel](https://vercel.com/), (formerly Zeit) is a cloud platform for serverless functions. There is a community rust runtime, [vercel-rust](https://github.com/vercel-community/rust).
