@@ -19,7 +19,8 @@ websocket = [
   "async-tungstenite",
   "tokio-tungstenite",
   "websocket",
-  "websocket-base"
+  "websocket-base",
+  "wtx"
 ]
 
 protocols = [
