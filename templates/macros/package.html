@@ -1,5 +1,5 @@
 {% macro package(pkg_name) %}
-{% set pkg = load_data(url="https://crates.io/api/v1/crates/" ~ pkg_name, format="json") %}
+{% set pkg = load_data(url="https://crates.io/api/v1/crates/" ~ pkg_name ~ "?include=", format="json") %}
 {% if pkg %}
   {% set pkg = pkg.crate %}
 <li id="pkg-{{pkg.id | default(value=pkg.name)}}" class="pkg">
