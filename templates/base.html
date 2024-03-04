@@ -63,7 +63,12 @@
       </div>
     </div>
     <p class="last-updated">
-      Last updated {{ get_env(name="CURRENT_TIME") }} - <a href="https://github.com/rust-net-web/arewewebyet/#license">CC-BY-4.0</a>
+      {% set build_time = get_env(name="CURRENT_TIME", default=false) %}
+      {% if build_time %}
+        Last updated {{ build_time }} -
+      {% endif %}
+
+      <a href="https://github.com/rust-net-web/arewewebyet/#license">CC-BY-4.0</a>
     </p>
   </footer>
 </body>
