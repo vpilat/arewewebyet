@@ -23,7 +23,8 @@ packages = [
   "ramhorns",
   "ructe",
   "axohtml",
-  "comrak"
+  "comrak",
+  "minijinja"
 ]
 
 newstag = "templating"
