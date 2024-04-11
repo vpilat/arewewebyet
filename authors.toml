@@ -1,15 +1,22 @@
+[giraffate]
+  name = "Takayuki Nakata"
+  curator = true
+  github = "giraffate"
+
+[ibraheemdev]
+  name = "Ibraheem Ahmed"
+  curator = true
+  github = "ibraheemdev"
+
 [ben]
   name = "Benjamin Kampmann"
-  curator = true
-  img = "http://www.create-build-execute.com/assets/images/ben.png"
+  img = "http://gnunicorn.org/assets/images/ben.png"
   bio = "Freelance OpenSource Software Architect and Developer. I design, build and supervise the building of software (systems). Sometimes for clients, often times on my own, whenever possible as OpenSource. I care about good design in both, the User Experience and backend architecture and infrastructure. And I write about all this stuff."
-  twitter = "SirDonQui"
-  github = "ligthyear"
-  homepage = "http://www.create-build-execute.com"
+  github = "gnunicorn"
+  homepage = "http://gnunicorn.org/"
 
 [manishearth]
   name = "Manish Goregaokar"
-  curator = "true"
   img = "https://www.gravatar.com/avatar/0a3069491bfded90cdf623341cadc1d1?s=512&amp;d=identicon&amp;r=PG"
   bio = "I’m a fourth year physics student studying at IIT Bombay. In my spare time I do a lot of programming, often open source, and participate in communities like Stack Exchange. These days I contribute to the [Servo browser engine](http://github.com/servo/servo) and occasionally to the [Rust programming language](http://github.com/rust-lang/rust)"
   twitter = "Manishearth"

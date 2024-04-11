@@ -17,40 +17,39 @@
 }
 
 .avatar {
-  height: 10em;
-  margin: 0.5em;
+  grid-area: avatar;
+  height: 3em;
+  margin-right: 1em;
   border-radius: 50%;
   border: 2px #eee solid;
-  float: left;
+  align-self: center;
 }
 
 .author {
   margin: 2em 0;
-}
-
-.author:not(:last-child):after {
-  content: " ";
-  border-bottom: 2px #eee solid;
-  width: 50%;
-}
-
-.author:nth-child(2n) .avatar {
-  float: right;
+  display: grid;
+  grid-template:
+    "avatar name" auto
+    "avatar social" auto
+    "bio bio" auto
+    / auto 1fr;
 }
 
 .social-media {
-  margin: 0 0 1em 0;
+  grid-area: social;
+  margin: 0;
 }
 
 .social-media a {
-  margin: .45rem 2rem 0 0;
+  margin-left: .7em;
   display: inline-block;
-
-  @include for-tablet-portrait-up {
-    margin: .25rem 1rem 0 0;
-  }
 }
 
 .social-media a:first-of-type {
   margin-left: 0;
+}
+
+.bio {
+  grid-area: bio;
+  margin: .5em 0 1em;
 }

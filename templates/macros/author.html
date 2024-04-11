@@ -1,6 +1,12 @@
 {% macro author(key, author) %}
 <div class="author" id="{{key}}">
-  <img class="avatar" src="{{author.img | default(value=get_url(path='/asset/bashy-big.svg'))}}" />
+  {% if author.img %}
+    <img class="avatar" src="{{author.img}}" />
+  {% elif author.github %}
+    <img class="avatar" src="https://www.github.com/{{author.github}}.png" />
+  {% else %}
+    <img class="avatar" src="{{get_url(path='/asset/bashy-big.svg')}}" />
+  {% endif %}
   {% if author.curator %}
   <a href="/curators/#{{key}}">
     {% endif %}
