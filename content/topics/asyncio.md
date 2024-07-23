@@ -12,7 +12,6 @@ packages = [
   "async-std",
   "async-stream",
   "async-trait",
-  "bastion",
   "futures",
   "futures-intrusive",
   "futures-timer",

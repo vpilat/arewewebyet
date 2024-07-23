@@ -10,7 +10,6 @@ level = 1
 queues = [
   "lapin",
   "tokio-amqp",
-  "beanstalkc",
   "celery",
   "rdkafka",
   "nats",

@@ -16,7 +16,6 @@ packages = [
   "png",
   "serde_qs",
   "serde_urlencoded",
-  "multipart",
   "tiff"
 ]
 

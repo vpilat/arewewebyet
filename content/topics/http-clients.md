@@ -1,5 +1,4 @@
 +++
-
 title = "HTTP Clients"
 
 [extra]
@@ -15,7 +14,6 @@ packages = [
   "reqwest",
   "surf",
   "ureq",
-  "yukikaze"
 ]
 
 news_tag = "clients"

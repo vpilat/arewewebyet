@@ -11,7 +11,6 @@ intro = "Binary protocol support"
 packages = [
   "avro-rs",
   "capnp",
-  "grpc",
   "protobuf",
   "prost",
   "tarpc",

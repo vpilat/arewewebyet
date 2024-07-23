@@ -10,15 +10,11 @@ intro = "When building a modern web-application you don't want to bother on how 
 server = [
   "actix-web",
   "gotham",
-  "nickel",
   "rocket",
-  "tide",
-  "thruster",
   "warp",
   "axum",
   "poem",
-  "salvo",
-  "lucia"
+  "salvo"
 ]
 
 frontend = [
@@ -26,7 +22,6 @@ frontend = [
   "dioxus",
   "iced",
   "sauron",
-  "seed",
   "sycamore",
   "yew"
 ]

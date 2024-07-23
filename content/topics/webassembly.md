@@ -11,21 +11,16 @@ packages=  [
   "cargo-wasi",
   "console_error_panic_hook",
   "console_log",
-  "dodrio",
   "dominator",
   "futures-signals",
   "gloo",
-  "moxie-dom",
   "parity-wasm",
   "plotters",
-  "squark",
   "stdweb",
-  "virtual-dom-rs",
   "wasm-bindgen",
   "walrus",
   "wasmi",
   "wasm-pack",
-  "woz",
   "trunk"
 ]
 

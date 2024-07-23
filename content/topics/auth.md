@@ -8,14 +8,11 @@ intro = "Authorization and Authentication are a big deal for web development. Ta
 level = 1
 
 packages = [
-  "asap",
   "casbin",
   "cookie",
   "jsonwebtoken",
   "oauth2",
   "openssl",
-  "oso",
-  "otpauth",
   "oxide-auth",
   "yup-oauth2"
 ]

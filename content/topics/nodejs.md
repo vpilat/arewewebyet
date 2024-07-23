@@ -10,8 +10,7 @@ intro = "Rust can be used to write fast and safe native Node.js modules through 
 packages = [
   "napi",
   "neon",
-  "node-bindgen",
-  "webbundle"
+  "node-bindgen"
 ]
 
 newstag = "node.js"
