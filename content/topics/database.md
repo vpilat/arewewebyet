@@ -9,12 +9,10 @@ intro = "Proper Database support is crucial for modern web development. This pag
 
 drivers = [
   "mysql",
-  "couchbase",
   "mysql_async",
   "postgres",
   "redis",
   "rbatis",
-  "darkredis",
   "rusqlite",
   "tokio-postgres",
   "leveldb",
@@ -22,7 +20,6 @@ drivers = [
   "sled",
   "influx_db_client",
   "cassandra-cpp",
-  "cdrs",
   "memcache",
   "mongodb",
   "sqlx"
@@ -30,9 +27,7 @@ drivers = [
 
 orms = [
   "diesel",
-  "rustorm",
-  "sea-orm",
-  "tql"
+  "sea-orm"
 ]
 
 pools = [
@@ -44,8 +39,6 @@ pools = [
 
 tools = [
   "diesel_migrations",
-  "migrant",
-  "quaint",
   "refinery"
 ]
 

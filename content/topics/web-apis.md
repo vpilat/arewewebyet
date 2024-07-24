@@ -8,22 +8,12 @@ intro = "With many Web-Apps we want to reach farther than our locally hosted ser
 level = 2
 
 packages = [
- "azure_sdk_for_rust",
  "rspotify",
- "twitter-api",
  "serenity",
- "hubcaps",
  "google_maps",
  "google-drive",
- "rvk",
  "teloxide",
- "telegram-bot",
- "pusher",
- "slack",
- "slack-hook2",
- "rants",
  "nats",
- "rusoto_core"
 ]
 
 missing = [

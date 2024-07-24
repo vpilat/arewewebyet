@@ -9,18 +9,14 @@ intro = "What would the web be without Email? It is one of the mose widely used 
 
 packages = [
   "async-imap",
-  "async-mailer",
   "email",
   "imap",
-  "imap-codec",
   "imap-proto",
   "lettre",
-  "mailchimp",
   "mail-auth",
   "mail-parser",
   "mail-send",
   "mrml",
-  "samotop",
   "sendgrid",
 ]
 

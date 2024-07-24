@@ -17,7 +17,6 @@ packages = [
   "syslog",
   "flexi_logger",
   "sentry",
-  "slog",
   "tracing"
 ]
 
