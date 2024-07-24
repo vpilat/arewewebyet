@@ -10,7 +10,8 @@ intro = "When building a modern web-application you don't want to bother on how 
 server = [
   "actix-web",
   "gotham",
-  "rocket",
+  "rocket", 
+  "tide",
   "warp",
   "axum",
   "poem",
